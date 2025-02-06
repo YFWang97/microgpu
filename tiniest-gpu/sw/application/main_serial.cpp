@@ -379,7 +379,6 @@ int main()
                         case SDLK_LEFT:
                             cam_yaw -= 3;
                             user_update = true;
-                            printf("Left\n");
                             break;
                         case SDLK_RIGHT:
                             cam_yaw += 3;
@@ -591,7 +590,7 @@ int main()
         }
     }
 
-    fprintf(stderr, "Closing serial port...");
+    fprintf(stderr, "Closing serial port...\n");
     close(serial_port);
     return 0;
 }

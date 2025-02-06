@@ -1,0 +1,496 @@
+/*
+
+AMD Vivado v2024.1 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+
+Process ID (PID): 400332
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Feb 05 01:19:25 EST 2025
+Time zone: 	Eastern Standard Time (America/Toronto)
+
+OS: Ubuntu
+OS Version: 5.15.0-131-generic
+OS Architecture: amd64
+Available processors (cores): 16
+LSB Release Description: DISTRIB_ID=Ubuntu
+
+Display: 0
+Screen size: 2560x1080
+Local screen bounds: x = 72, y = 27, width = 2488, height = 1053
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/home/yangfan/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/home/yangfan/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	yangfan
+User home directory: /home/yangfan
+User working directory: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/yangfan/Xilinx/Vivado
+HDI_APPROOT: /home/yangfan/Xilinx/Vivado/2024.1
+RDI_DATADIR: /home/yangfan/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /home/yangfan/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /home/yangfan/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /home/yangfan/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /home/yangfan/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/home/yangfan/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/vivado.log
+Vivado journal file: 	/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-400332-Wangs-Linux
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /home/yangfan/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /home/yangfan/Xilinx/Vivado
+RDI_BINROOT: /home/yangfan/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/yangfan/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /home/yangfan/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /home/yangfan/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu/20:/home/yangfan/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu:/home/yangfan/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/yangfan/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/yangfan/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full:Wangs-Linux_1738736353_400291
+RDI_SHARED_DATA: /home/yangfan/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /home/yangfan/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /home/yangfan/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_DSP: /home/yangfan/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /home/yangfan/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /home/yangfan/Xilinx/Vivado/2024.1
+XILINX_VIVADO: /home/yangfan/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /home/yangfan/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,483 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.xpr. Version: Vivado v2024.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,586 MB. GUI used memory: 64 MB. Current time: 2/5/25, 1:19:26 AM EST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 132 MB (+136425kb) [00:00:14]
+// [Engine Memory]: 1,784 MB (+1719310kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  1461 ms.
+// Tcl Message: open_project /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/yangfan/Xilinx/Vivado/2024.1/data/ip'. 
+// [Engine Memory]: 1,913 MB (+41983kb) [00:00:15]
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 8009.445 ; gain = 500.930 ; free physical = 11478 ; free virtual = 19691 
+// Project name: full; location: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full; part: xc7a35ticpg236-1L
+dismissDialog("Open Project"); // bj (Open Project Progress)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 22, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Tcl (Dont Echo) Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // u (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+dismissDialog("Open Hardware Manager"); // bj (Open Hardware Manager Progress)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_SERVER_UPDATE
+// [GUI Memory]: 143 MB (+3576kb) [00:00:21]
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2024.1   **** Build date : May 22 2024 at 19:19:01     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2024.1.0   ****** Build date   : Apr 26 2024-21:40:49     **** Build number : 2024.1.1714182049       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.    
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AA0FAAA 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0). 
+dismissDialog("Auto Connect"); // bj (Auto Connect Progress)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "XADC ; ", 3, "XADC", 0, false); // m (PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE)
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 155 MB (+5501kb) [00:00:25]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 24, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ap (xc7a35t_0)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMoreButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, (String) null, "Program Device"); // r (PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE)
+// Elapsed time: 13 seconds
+setFileChooser("/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu.bit");
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP (dialog0)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 18 seconds
+dismissDialog("Program Device"); // bj (Program Device Progress)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenuItem(PAResourceCommand.PACommandNames_HARDWARE_SIO_LINKS_WINDOW, "Serial I/O Links"); // ap (PAResourceCommand.PACommandNames_HARDWARE_SIO_LINKS_WINDOW, view_hardware_sio_links_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+// Run Command: PAResourceCommand.PACommandNames_HARDWARE_SIO_LINKS_WINDOW
+selectTab((HResource) null, (HResource) null, "Serial I/O Scans", 3); // aa
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, "Dashboard"); // am (PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, Dashboard)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ah (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ah (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ah (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ah (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ah (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ah (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+// Elapsed time: 29 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 611, 89); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 528, 103); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 528, 103, false, false, false, false, true); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR) - Double Click
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 486, 97); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 343, 67); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 343, 67, false, false, false, false, true); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR) - Double Click
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 595, 63); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+// Elapsed time: 123 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ah (PAResourceItoN.MainMenuMgr_VIEW, View)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ah (PAResourceItoN.MainMenuMgr_VIEW, View)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ah (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ah (RDIResource.MainWinMenuMgr_LAYOUT, Layout)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ah (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ah (PAResourceItoN.MainMenuMgr_REPORTS, Reports)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+selectMenuItem(PAResourceCommand.PACommandNames_HARDWARE_WINDOW, "Hardware"); // ap (PAResourceCommand.PACommandNames_HARDWARE_WINDOW, view_hardware_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ah (PAResourceItoN.MainMenuMgr_WINDOW, Window)
+// Run Command: PAResourceCommand.PACommandNames_HARDWARE_WINDOW
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a35t_0 (1) ; Programmed", 2, "xc7a35t_0 (1)", 0, true, false, false, false, true, false); // m (PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SHOW_BUS_PLOT, "Show Bus Plot..."); // ap (PAResourceCommand.PACommandNames_SHOW_BUS_PLOT, show_bus_plot_menu)
+// Run Command: PAResourceCommand.PACommandNames_SHOW_BUS_PLOT
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Show Bus Plot..."); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Show Bus Plot..."); // f (dialog2)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a35t_0 (1) ; Programmed", 2, "xc7a35t_0 (1)", 0, true, false, false, false, true, false); // m (PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE) - Popup Trigger - Node
+// Elapsed time: 261 seconds
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xilinx_tcf/Digilent/210183AA0FAAA (1) ; Open", 1, "xilinx_tcf/Digilent/210183AA0FAAA (1)", 0, true); // m (PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xilinx_tcf/Digilent/210183AA0FAAA (1) ; Open", 1, "xilinx_tcf/Digilent/210183AA0FAAA (1)", 0, true, false, false, false, true, false); // m (PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Hardware Target Properties..."); // ap (RDIResourceCommand.RDICommands_PROPERTIES, edit_properties_menu)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g (RDIResource.PropertiesView_TABBED_PANE)
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "PARAM ; ", 8); // m (PAResourceTtoZ.TclObjectTreeTable_TREETABLE)
+// [GUI Memory]: 169 MB (+7055kb) [00:19:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,006 MB. GUI used memory: 79 MB. Current time: 2/5/25, 1:49:26 AM EST
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AA0FAAA 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Elapsed time: 1569 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Close Hardware Target"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Close Hardware Target"); // j.a (dialog3)
+// Elapsed time: 40 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP (dialog4)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bj (Program Device Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 73 MB. Current time: 2/5/25, 2:19:26 AM EST
+// [Engine Memory]: 2,009 MB (+291kb) [01:01:13]
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AA0FAAA 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 2565 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Close Hardware Target"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Close Hardware Target"); // j.a (dialog5)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 62 MB. Current time: 2/5/25, 2:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 61 MB. Current time: 2/5/25, 3:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 60 MB. Current time: 2/5/25, 3:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 60 MB. Current time: 2/5/25, 4:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 60 MB. Current time: 2/5/25, 4:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 60 MB. Current time: 2/5/25, 5:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 60 MB. Current time: 2/5/25, 5:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 60 MB. Current time: 2/5/25, 6:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 6:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 61 MB. Current time: 2/5/25, 7:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 7:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 8:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 8:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 9:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 9:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 10:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 10:49:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 11:19:26 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 11:49:27 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 12:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 12:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 61 MB. Current time: 2/5/25, 1:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 1:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 2:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 2:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 3:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 3:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 4:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 4:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 5:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 5:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 6:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 61 MB. Current time: 2/5/25, 6:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 61 MB. Current time: 2/5/25, 7:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 7:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 61 MB. Current time: 2/5/25, 8:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 8:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 61 MB. Current time: 2/5/25, 9:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 9:49:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,019 MB. GUI used memory: 60 MB. Current time: 2/5/25, 10:19:27 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,103 MB. GUI used memory: 60 MB. Current time: 2/5/25, 10:42:37 PM EST
+// Elapsed time: 72318 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 24, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ap (xc7a35t_0)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// HOptionPane Error: 'The file '/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/ full.runs/impl_1/top_gpu.bit' does not exist. Please specify a valid file name. (Invalid File Name)'
+selectButton("OptionPane.button", "OK", "Invalid File Name"); // JButton (OptionPane.button)
+selectMoreButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, (String) null, "Program Device"); // r (PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE)
+// Elapsed time: 29 seconds
+dismissFileChooser();
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Program Device"); // a (RDIResource.BaseDialog_CANCEL)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Program Device"); // a (RDIResource.BaseDialog_CANCEL)
+// 'D' command handler elapsed time: 37 seconds
+dismissDialog("Program Device"); // aP (dialog6)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// 'cI' command handler elapsed time: 4 seconds
+selectButton("OptionPane.button", "Cancel", "Generate Bitstream"); // JButton (OptionPane.button)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 649, 14); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 586, 24); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 466, 68); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 24, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ap (xc7a35t_0)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMoreButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, (String) null, "Program Device"); // r (PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE)
+selectComboBox(RDIResource.HJFileChooserRecentListPreview_RECENT_DIRECTORIES, "/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1", 0); // aa.b (RDIResource.HJFileChooserRecentListPreview_RECENT_DIRECTORIES)
+// HOptionPane Error: 'Invalid file '/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/ full/full.runs/impl_1/top_gpu.bit'. File does not exist. (Invalid File)'
+selectButton("OptionPane.button", "OK", "Invalid File"); // JButton (OptionPane.button)
+// Elapsed time: 30 seconds
+dismissFileChooser();
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Program Device"); // a (RDIResource.BaseDialog_CANCEL)
+// 'D' command handler elapsed time: 43 seconds
+dismissDialog("Program Device"); // aP (dialog8)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 4); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton("OptionPane.button", "OK", "Generate Bitstream"); // JButton (OptionPane.button)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // cL (dialog10)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: ERROR: [Common 17-70] Application Exception: Input checkpoint '/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu_routed.dcp' does not exist. Make sure the 'project.writeIntermediateCheckpoints' param is enabled before launching intermediate steps. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-70] Application Exception: Input checkpoint '/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu_routed.dcp' does not exist. Make sure the 'project.writeIntermediateCheckpoints' param is enabled before launching intermediate steps.  
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[Common 17-70] Application Exception: Input checkpoint '/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu_routed.dcp' does not exist. Make sure the 'project.writeIntermediateCheckpoints' param is enabled before launching intermediate steps.", 0); // b (PAResourceAtoD.CmdMsgDialog_MESSAGES)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Launch Run Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Launch Run Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Launch Run Critical Messages"); // ba (dialog11)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 20, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton("OptionPane.button", "OK", "Run Implementation"); // JButton (OptionPane.button)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // f (dialog12)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Wed Feb  5 22:45:19 2025] Launched impl_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bj (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 62 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (PAResourceCommand.PACommandNames_RUN_BITGEN)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Implementation Completed"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // cL (dialog14)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Wed Feb  5 22:46:24 2025] Launched impl_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Bitstream Generation Completed"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Bitstream Generation Completed"); // Q.a (dialog15)
+// Elapsed time: 192 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP (dialog16)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bj (Program Device Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,103 MB. GUI used memory: 63 MB. Current time: 2/5/25, 11:12:37 PM EST

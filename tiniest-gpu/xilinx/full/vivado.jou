@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Feb  5 01:19:15 2025
+# Process ID: 400332
+# Current directory: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full
+# Command line: vivado
+# Log file: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/vivado.log
+# Journal file: /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/vivado.jou
+# Running On        :Wangs-Linux
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 20.04.6 LTS
+# Processor Detail  :AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency     :2200.000 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :33550 MB
+# Swap memory       :2147 MB
+# Total Virtual     :35698 MB
+# Available Virtual :21618 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.xpr
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
