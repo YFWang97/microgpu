@@ -1,0 +1,114 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Feb  6 23:41:40 2025
+# Process ID: 889959
+# Current directory: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full
+# Command line: vivado
+# Log file: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/vivado.log
+# Journal file: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/vivado.jou
+# Running On        :Wangs-Linux
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 20.04.6 LTS
+# Processor Detail  :AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency     :2200.000 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :33550 MB
+# Swap memory       :2147 MB
+# Total Virtual     :35698 MB
+# Available Virtual :13583 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/xilinx/full/full.xpr
+open_project /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/baud_rate_generator.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/bitmap_rom_ddct.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/bitmap_rom_sk.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/div.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/dot4.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/ia.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/project.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/raster.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/slowmpy.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/uart_receiver.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/uart_top.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/vga.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/vs.v] -no_script -reset -force -quiet
+remove_files  {/home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/baud_rate_generator.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/bitmap_rom_ddct.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/bitmap_rom_sk.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/div.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/dot4.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/ia.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/project.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/raster.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/slowmpy.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/uart_receiver.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/uart_top.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/vga.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/tiniest-gpu/rtl/vs.v}
+add_files -norecurse -scan_for_includes {/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/bitmap_rom_tt.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/raster.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/bitmap_rom_ddct.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/ia.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/div.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/baud_rate_generator.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/vga.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/vs.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/slowmpy.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/uart_receiver.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/bitmap_rom_sk.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/dot4.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/uart_top.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/project.v}
+update_compile_order -fileset sources_1
+set_property -dict [list \
+  CONFIG.CLKOUT2_JITTER {183.243} \
+  CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {20} \
+  CONFIG.CLKOUT2_USED {true} \
+  CONFIG.CLK_OUT2_PORT {clk_20} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {50} \
+  CONFIG.NUM_OUT_CLKS {2} \
+] [get_ips clk_wiz_0]
+generate_target all [get_files  /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 8
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files/sim_scripts -ip_user_files_dir /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files -ipstatic_source_dir /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/modelsim} {questa=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/questa} {xcelium=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/xcelium} {vcs=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/vcs} {riviera=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list \
+  CONFIG.CLKOUT2_JITTER {159.371} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {40} \
+  CONFIG.CLK_OUT2_PORT {clk_40} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {25} \
+] [get_ips clk_wiz_0]
+generate_target all [get_files  /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 8
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files/sim_scripts -ip_user_files_dir /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files -ipstatic_source_dir /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/modelsim} {questa=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/questa} {xcelium=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/xcelium} {vcs=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/vcs} {riviera=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/baud_rate_generator.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/bitmap_rom_ddct.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/bitmap_rom_sk.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/div.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/dot4.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/ia.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/project.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/raster.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/slowmpy.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/uart_receiver.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/uart_top.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/vga.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/vs.v] -no_script -reset -force -quiet
+remove_files  {/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/baud_rate_generator.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/bitmap_rom_ddct.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/bitmap_rom_sk.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/div.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/dot4.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/ia.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/project.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/raster.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/slowmpy.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/uart_receiver.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/uart_top.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/vga.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz/vs.v}
+add_files -scan_for_includes {/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/bitmap_rom_tt.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/vga.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/div.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/bitmap_rom_sk.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/uart_receiver.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/dot4.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/vs.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/raster.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/bitmap_rom_ddct.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/slowmpy.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/uart_top.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/baud_rate_generator.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/ia.v}
+update_compile_order -fileset sources_1
+set_property -dict [list \
+  CONFIG.CLKOUT2_USED {false} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+  CONFIG.NUM_OUT_CLKS {1} \
+] [get_ips clk_wiz_0]
+generate_target all [get_files  /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 8
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files/sim_scripts -ip_user_files_dir /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files -ipstatic_source_dir /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/modelsim} {questa=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/questa} {xcelium=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/xcelium} {vcs=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/vcs} {riviera=/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

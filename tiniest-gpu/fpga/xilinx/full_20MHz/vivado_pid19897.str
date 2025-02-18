@@ -1,0 +1,3010 @@
+/*
+
+AMD Vivado v2024.1 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+
+Process ID (PID): 19897
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Feb 07 22:49:21 EST 2025
+Time zone: 	Eastern Standard Time (America/Toronto)
+
+OS: Ubuntu
+OS Version: 6.8.0-52-generic
+OS Architecture: amd64
+Available processors (cores): 16
+LSB Release Description: DISTRIB_ID=Ubuntu
+
+Display: 0
+Screen size: 2560x1080
+Local screen bounds: x = 66, y = 32, width = 2494, height = 1048
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/home/yangfan/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/home/yangfan/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	yangfan
+User home directory: /home/yangfan
+User working directory: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/yangfan/Xilinx/Vivado
+HDI_APPROOT: /home/yangfan/Xilinx/Vivado/2024.1
+RDI_DATADIR: /home/yangfan/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /home/yangfan/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /home/yangfan/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /home/yangfan/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /home/yangfan/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/home/yangfan/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado.log
+Vivado journal file: 	/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-19897-Wangs-Linux
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /home/yangfan/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /home/yangfan/Xilinx/Vivado
+RDI_BINROOT: /home/yangfan/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/yangfan/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /home/yangfan/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /home/yangfan/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu:/home/yangfan/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/yangfan/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/yangfan/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz:Wangs-Linux_1738986550_19828
+RDI_SHARED_DATA: /home/yangfan/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /home/yangfan/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /home/yangfan/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_DSP: /home/yangfan/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /home/yangfan/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /home/yangfan/Xilinx/Vivado/2024.1
+XILINX_VIVADO: /home/yangfan/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /home/yangfan/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,444 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // t (PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next >", "New Project"); // JButton (NEXT)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,522 MB. GUI used memory: 67 MB. Current time: 2/7/25, 10:49:22 PM EST
+// Elapsed time: 11 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "full_20MHz"); // R (PAResourceOtoP.ProjectNameChooser_PROJECT_NAME)
+selectButton("CANCEL", "Cancel", "New Project"); // JButton (CANCEL)
+// 'g' command handler elapsed time: 13 seconds
+dismissDialog("New Project"); // f (dialog0)
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// Elapsed time: 54 seconds
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // t (PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next >", "New Project"); // JButton (NEXT)
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "full_20MHz"); // R (PAResourceOtoP.ProjectNameChooser_PROJECT_NAME)
+setText(PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, "/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz"); // aj (PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION)
+selectButton("NEXT", "Next >", "New Project"); // JButton (NEXT)
+selectButton("NEXT", "Next >", "New Project"); // JButton (NEXT)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_DIRECTORIES, "Add Directories", "New Project"); // a (PAResourceQtoS.SrcChooserPanel_ADD_DIRECTORIES)
+setFolderChooser("/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/clk_20MHz");
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// Elapsed time: 31 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files", "New Project"); // a (PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT)
+setFileChooser("/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/top_fpga.v");
+selectButton("NEXT", "Next >", "New Project"); // JButton (NEXT)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files", "New Project"); // a (PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES)
+setFileChooser("/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/Basys-3-tiniest_gpu.xdc");
+// HMemoryUtils.trashcanNow. Engine heap size: 1,535 MB. GUI used memory: 63 MB. Current time: 2/7/25, 10:51:52 PM EST
+// [GUI Memory]: 69 MB (+69884kb) [00:02:39]
+// [Engine Memory]: 1,536 MB (+1459128kb) [00:02:39]
+selectButton("NEXT", "Next >", "New Project"); // JButton (NEXT)
+// Elapsed time: 26 seconds
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a35ticpg236-1L ; 236 ; 106 ; 20800 ; 41600 ; 50 ; 0 ; 90 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 5 ;  ;  ;  ;  ; 0 ;  ;  ; -40 ; 100 ; 100 ; I ; 0.92 ; 0.92 ; 0.98", 173, "xc7a35ticpg236-1L", 0); // c (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// Elapsed time: 14 seconds
+selectButton("NEXT", "Next >", "New Project"); // JButton (NEXT)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 131 MB (+61367kb) [00:03:23]
+// [Engine Memory]: 1,629 MB (+16981kb) [00:03:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  1032 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project full_20MHz . -part xc7a35ticpg236-1L 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/yangfan/Xilinx/Vivado/2024.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,741 MB. GUI used memory: 74 MB. Current time: 2/7/25, 10:52:37 PM EST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 1,741 MB (+32183kb) [00:03:24]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 -norecurse /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/Basys-3-tiniest_gpu.xdc 
+selectButton("FINISH", "Finish", "New Project"); // JButton (FINISH)
+// 'g' command handler elapsed time: 131 seconds
+dismissDialog("Create Project"); // bj (Create Project Progress)
+dismissDialog("New Project"); // f (dialog1)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 141 MB (+3246kb) [00:03:28]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ah (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ap (PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, ip_packager_wizard_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ah (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >", "Create and Package New IP"); // JButton (NEXT)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b (PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4)
+selectButton("CANCEL", "Cancel", "Create and Package New IP"); // JButton (CANCEL)
+// 'n' command handler elapsed time: 5 seconds
+dismissDialog("Create and Package New IP"); // x (dialog5)
+// [GUI Memory]: 151 MB (+2969kb) [00:03:37]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// HMemoryUtils.trashcanNow. Engine heap size: 1,804 MB. GUI used memory: 76 MB. Current time: 2/7/25, 10:52:52 PM EST
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "clk"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clock Verification IP ;  ; Production ; Included ; xilinx.com:ip:clk_vip:1.0", 2, "Clock Verification IP", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:6.0", 6, "Clocking Wizard", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:6.0", 6, "Clocking Wizard", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:6.0", 6); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:6.0", 6, "Clocking Wizard", 0, false, false, false, false, false, true); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// [Engine Memory]: 1,844 MB (+16353kb) [00:03:44]
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("Customize IP"); // i (Customize IP Progress)
+// [Engine Memory]: 2,099 MB (+170443kb) [00:03:49]
+selectRadioButton((HResource) null, "MMCM"); // cD
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+setText("CLK OUT1 PORT", "clk_50"); // w (CLK OUT1 PORT)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT1 REQUESTED OUT FREQ", "50"); // w (CLKOUT1 REQUESTED OUT FREQ)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,159 MB. GUI used memory: 96 MB. Current time: 2/7/25, 10:53:22 PM EST
+selectCheckBox((HResource) null, "clk_out2", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLK OUT2 PORT", "clk_40"); // w (CLK OUT2 PORT)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT2 REQUESTED OUT FREQ", "40"); // w (CLKOUT2 REQUESTED OUT FREQ)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Port Renaming", 2); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 3); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Customize IP"); // m (dialog6)
+// TclEventType: CREATE_IP_CORE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list \   CONFIG.CLKOUT1_JITTER {151.636} \   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} \   CONFIG.CLKOUT2_JITTER {159.371} \   CONFIG.CLKOUT2_PHASE_ERROR {98.575} \   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {40} \   CONFIG.CLKOUT2_USED {true} \   CONFIG.CLK_OUT1_PORT {clk_50} \   CONFIG.CLK_OUT2_PORT {clk_40} \   CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} \   CONFIG.MMCM_CLKOUT1_DIVIDE {25} \   CONFIG.NUM_OUT_CLKS {2} \ ] [get_ips clk_wiz_0] 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'... 
+dismissDialog("Customize IP"); // bj (Customize IP Progress)
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate", "Generate Output Products"); // a (PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY)
+// Elapsed Time for: 'L.f': 01m:12s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: generate_target all [get_files  /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all clk_wiz_0] } 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// [Engine Memory]: 2,224 MB (+21627kb) [00:04:36]
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs clk_wiz_0_synth_1 -jobs 8 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0 
+// Tcl Message: [Fri Feb  7 22:53:50 2025] Launched clk_wiz_0_synth_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/clk_wiz_0_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,231 MB. GUI used memory: 89 MB. Current time: 2/7/25, 10:53:52 PM EST
+// TclEventType: RUN_STATUS_CHANGE
+selectButton("OptionPane.button", "OK", "Generate Output Products"); // JButton (OptionPane.button)
+// Elapsed Time for: 'L.f': 01m:18s
+// [GUI Memory]: 177 MB (+19466kb) [00:04:45]
+// [GUI Memory]: 225 MB (+41502kb) [00:04:45]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  9796 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02m:20s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,267 MB. GUI used memory: 93 MB. Current time: 2/7/25, 10:54:57 PM EST
+// Elapsed Time for: 'L.f': 02m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02m:34s
+// Elapsed Time for: 'L.f': 02m:36s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03m:50s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,301 MB. GUI used memory: 93 MB. Current time: 2/7/25, 10:56:27 PM EST
+// Elapsed Time for: 'L.f': 03m:52s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 03m:56s
+// Elapsed Time for: 'L.f': 03m:58s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04m:20s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 93 MB. Current time: 2/7/25, 10:56:57 PM EST
+// Elapsed Time for: 'L.f': 04m:22s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 24m:58s
+// [Engine Memory]: 2,343 MB (+8215kb) [00:28:22]
+// Elapsed Time for: 'L.f': 25m:00s
+// Elapsed time: 1445 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes", "No Implementation Results Available"); // a (RDIResource.BaseDialog_YES)
+dismissDialog("No Implementation Results Available"); // t (dialog8)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // cL (dialog9)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Fri Feb  7 23:18:03 2025] Launched synth_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/synth_1/runme.log [Fri Feb  7 23:18:03 2025] Launched impl_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:08 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:09 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:10 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:11 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+// HMemoryUtils.trashcanNow. Engine heap size: 2,381 MB. GUI used memory: 87 MB. Current time: 2/7/25, 11:18:12 PM EST
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:12 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:13 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:14 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:15 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2024.1 (64-bit)
+# SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build: 5076995 on Wed May 22 18:29:18 MDT 2024
+# Current time: Fri Feb 07 23:18:16 EST 2025
+# Process ID (PID): 19897
+# OS: Ubuntu
+# User: yangfan
+# Project: full_20MHz
+# Part: xc7a35ticpg236-1L
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug)
+*/
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,377 MB. GUI used memory: 87 MB. Current time: 2/7/25, 11:48:12 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,377 MB. GUI used memory: 68 MB. Current time: 2/8/25, 12:18:12 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,377 MB. GUI used memory: 67 MB. Current time: 2/8/25, 12:48:13 AM EST
+// Elapsed time: 5634 seconds
+selectButton(RDIResource.HExceptionDialog_CONTINUE, "Continue", "Vivado Internal Exception"); // a (RDIResource.HExceptionDialog_CONTINUE)
+selectButton(RDIResource.HExceptionDialog_CONTINUE, "Continue", "Vivado Internal Exception"); // a (RDIResource.HExceptionDialog_CONTINUE)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; Scripts Generated ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; 00:00:00 ; Vivado Implementation Defaults (Vivado Implementation 2024) ; Vivado Implementation Default Reports (Vivado Implementation 2024) ; xc7a35ticpg236-1L ;  ; Default settings for Implementation.", 1, "Scripts Generated", 2, false); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.2s
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Feb 07 23:18:04 EST 2025 ; 00:00:27 ; Vivado Synthesis Defaults (Vivado Synthesis 2024) ; Vivado Synthesis Default Reports (Vivado Synthesis 2024) ; xc7a35ticpg236-1L ; Wangs-Linux ; Vivado Synthesis Defaults", 0, "synth_design ERROR", 2, true); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,421 MB. GUI used memory: 76 MB. Current time: 2/8/25, 12:52:03 AM EST
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Feb 07 23:18:04 EST 2025 ; 00:00:27 ; Vivado Synthesis Defaults (Vivado Synthesis 2024) ; Vivado Synthesis Default Reports (Vivado Synthesis 2024) ; xc7a35ticpg236-1L ; Wangs-Linux ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE) - Node
+collapseTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Feb 07 23:18:04 EST 2025 ; 00:00:27 ; Vivado Synthesis Defaults (Vivado Synthesis 2024) ; Vivado Synthesis Default Reports (Vivado Synthesis 2024) ; xc7a35ticpg236-1L ; Wangs-Linux ; Vivado Synthesis Defaults", 0); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design ERROR ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Fri Feb 07 23:18:04 EST 2025 ; 00:00:27 ; Vivado Synthesis Defaults (Vivado Synthesis 2024) ; Vivado Synthesis Default Reports (Vivado Synthesis 2024) ; xc7a35ticpg236-1L ; Wangs-Linux ; Vivado Synthesis Defaults", 0, "synth_1", 0, true, false, false, false, false, true); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes", "No Implementation Results Available"); // a (RDIResource.BaseDialog_YES)
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // t (dialog11)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Launch Runs"); // cL (dialog12)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Sat Feb  8 00:52:09 2025] Launched synth_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/synth_1/runme.log [Sat Feb  8 00:52:09 2025] Launched impl_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,452 MB. GUI used memory: 77 MB. Current time: 2/8/25, 12:52:18 AM EST
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 31 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Synthesis Failed"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // Q.a (dialog13)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-106] *** Exception: java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0 (See /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20Mhz/vivado_pid19897.debug). ]", 2, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-11365] for the instance 'instance_name' of module 'clk_wiz_0' declared at '/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/synth_1/.Xil/Vivado-35101-Wangs-Linux/realtime/clk_wiz_0_stub.v:6', named port connection 'clk_100' does not exist [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/top_fpga.v:27]. ]", 5, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-11365] for the instance 'instance_name' of module 'clk_wiz_0' declared at '/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/synth_1/.Xil/Vivado-35101-Wangs-Linux/realtime/clk_wiz_0_stub.v:6', named port connection 'clk_100' does not exist [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/top_fpga.v:27]. ]", 5, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-11365] for the instance 'instance_name' of module 'clk_wiz_0' declared at '/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/synth_1/.Xil/Vivado-35101-Wangs-Linux/realtime/clk_wiz_0_stub.v:6', named port connection 'clk_100' does not exist [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/top_fpga.v:27]. ]", 5, false, false, false, false, false, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Double Click
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, clk_wiz_0]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, clk_wiz_0, Instantiation Template]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+dismissDialog("Re-customize IP"); // C (Re-customize IP Progress)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cI (PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE)
+setText("PRIMARY PORT", "clk_100", true); // w (PRIMARY PORT)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 22 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Re-customize IP"); // m (dialog14)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property CONFIG.PRIMARY_PORT {clk_100} [get_ips clk_wiz_0] 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:00m:57s
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate", "Generate Output Products"); // a (PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: generate_target all [get_files  /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all clk_wiz_0] } 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// [Engine Memory]: 2,461 MB (+170kb) [02:04:23]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run clk_wiz_0_synth_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs clk_wiz_0_synth_1 -jobs 8 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0 
+// Tcl Message: [Sat Feb  8 00:53:37 2025] Launched clk_wiz_0_synth_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/clk_wiz_0_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: RUN_STATUS_CHANGE
+selectButton("OptionPane.button", "OK", "Generate Output Products"); // JButton (OptionPane.button)
+// Elapsed Time for: 'L.f': 02h:01m:05s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,472 MB. GUI used memory: 90 MB. Current time: 2/8/25, 12:53:48 AM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  25816 ms.
+// Elapsed time: 72 seconds
+selectButton(PAResourceItoN.NotificationManager_RUN_SUCCESSFULLY_COMPLETED, "clk_wiz_0_synth_1"); // i (PAResourceItoN.NotificationManager_RUN_SUCCESSFULLY_COMPLETED)
+// Run Command: PAResourceCommand.PACommandNames_DESIGN_RUNS_WINDOW
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes", "No Implementation Results Available"); // a (RDIResource.BaseDialog_YES)
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // t (dialog16)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // cL (dialog17)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Sat Feb  8 00:55:02 2025] Launched synth_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/synth_1/runme.log [Sat Feb  8 00:55:02 2025] Launched impl_1... Run output will be captured here: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,496 MB. GUI used memory: 92 MB. Current time: 2/8/25, 12:56:08 AM EST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 136 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Bitstream Generation Completed"); // a (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Tcl (Dont Echo) Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // u (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// Tcl Message: open_hw_manager 
+dismissDialog("Open Hardware Manager"); // bj (Open Hardware Manager Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,564 MB. GUI used memory: 98 MB. Current time: 2/8/25, 12:57:23 AM EST
+// Elapsed time: 10 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g (PAResourceOtoP.ProgramDebugTab_OPEN_TARGET)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2024.1   **** Build date : May 22 2024 at 19:19:01     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2024.1.0   ****** Build date   : Apr 26 2024-21:40:49     **** Build number : 2024.1.1714182049       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.    
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AA0FAAA 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bj (Auto Connect Progress)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g (PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMoreButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, (String) null, "Program Device"); // r (PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE)
+setFileChooser("/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/impl_1/top_gpu.bit");
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+dismissDialog("Program Device"); // aP (dialog19)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full_20MHz/full_20MHz.runs/impl_1/top_gpu.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 13 seconds
+dismissDialog("Program Device"); // bj (Program Device Progress)
+// WARNING: HEventQueue.dispatchEvent() is taking  4872 ms.

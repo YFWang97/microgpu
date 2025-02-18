@@ -1,0 +1,81 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/qsim_rtl/vga_controller
+vtb_vga_controller
+!s10a 1739470619
+!s110 1739470626
+!i10b 1
+!s100 V3mS>=i]0hmSGVACQ1LKd3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5nK=]=^0Vjg25>:XcTje23
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1739470619
+8/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v
+F/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v
+!i122 11
+L0 1 48
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1739470626.000000
+!s107 /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v|
+!s90 -reportprogress|300|+acc|-incr|/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v|
+!i113 1
+Z4 o+acc
+Z5 tCvgOpt 0
+vvga
+Z6 !s110 1739471365
+!i10b 1
+!s100 oDZ1S;KLID6I__FXR4h1m3
+R1
+IX?=aj0nJNTB5Ee@bl0_ob1
+R2
+R0
+w1739429216
+8/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_50.v
+F/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_50.v
+!i122 13
+L0 5 61
+R3
+r1
+!s85 0
+31
+Z7 !s108 1739471365.000000
+Z8 !s107 /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v|/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_50.v|/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga.v|
+Z9 !s90 -reportprogress|300|+acc|-incr|/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga.v|/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_50.v|/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v|
+!i113 1
+R4
+R5
+vvga_controller
+R6
+!i10b 1
+!s100 EU]Zk^`Z8dMi92OnBjSzJ2
+R1
+Io<nRLZ>96bF6c=J_?SYj21
+R2
+R0
+w1739470890
+8/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v
+F/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v
+!i122 13
+L0 1 125
+R3
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R4
+R5

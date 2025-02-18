@@ -1,0 +1,371 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/qsim_rtl/top
+vbaud_rate_generator
+Z1 !s10a 1738902831
+Z2 !s110 1739329193
+!i10b 1
+!s100 8d4JRAKWE6`RHbCC9CKR?1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IXNz8fJGeMhSGleLV:IN[C1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z5 w1738902831
+8../../rtl/clk_20MHz/baud_rate_generator.v
+F../../rtl/clk_20MHz/baud_rate_generator.v
+!i122 0
+L0 35 29
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1739329193.000000
+Z8 !s107 ../../rtl/clk_20MHz/vs.v|../../rtl/clk_20MHz/vga.v|../../rtl/clk_20MHz/uart_top.v|../../rtl/clk_20MHz/uart_receiver.v|../../rtl/clk_20MHz/slowmpy.v|../../rtl/clk_20MHz/raster.v|../../rtl/clk_20MHz/project.v|../../rtl/clk_20MHz/ia.v|../../rtl/clk_20MHz/dot4.v|../../rtl/clk_20MHz/div.v|../../rtl/clk_20MHz/bitmap_rom_tt.v|../../rtl/clk_20MHz/bitmap_rom_sk.v|../../rtl/clk_20MHz/bitmap_rom_ddct.v|../../rtl/clk_20MHz/baud_rate_generator.v|
+Z9 !s90 -reportprogress|300|+acc|-incr|../../rtl/clk_20MHz/baud_rate_generator.v|../../rtl/clk_20MHz/bitmap_rom_ddct.v|../../rtl/clk_20MHz/bitmap_rom_sk.v|../../rtl/clk_20MHz/bitmap_rom_tt.v|../../rtl/clk_20MHz/div.v|../../rtl/clk_20MHz/dot4.v|../../rtl/clk_20MHz/ia.v|../../rtl/clk_20MHz/project.v|../../rtl/clk_20MHz/raster.v|../../rtl/clk_20MHz/slowmpy.v|../../rtl/clk_20MHz/uart_receiver.v|../../rtl/clk_20MHz/uart_top.v|../../rtl/clk_20MHz/vga.v|../../rtl/clk_20MHz/vs.v|
+!i113 1
+Z10 o+acc
+Z11 tCvgOpt 0
+vbitmap_rom_ddct
+R1
+R2
+!i10b 1
+!s100 7ZLGO7zKcC<^mR2A;MEKH1
+R3
+I5nV53NeMnS8I7h0]XZ]gS3
+R4
+R0
+R5
+8../../rtl/clk_20MHz/bitmap_rom_ddct.v
+F../../rtl/clk_20MHz/bitmap_rom_ddct.v
+!i122 0
+Z12 L0 2 2062
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vbitmap_rom_sk
+R1
+R2
+!i10b 1
+!s100 fFPb?2M8e<JFgN6jn=W@G2
+R3
+IHT5`3RTQa5AVY<UcFCn`i2
+R4
+R0
+R5
+8../../rtl/clk_20MHz/bitmap_rom_sk.v
+F../../rtl/clk_20MHz/bitmap_rom_sk.v
+!i122 0
+R12
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vbitmap_rom_tt
+R1
+R2
+!i10b 1
+!s100 HXJ4UQ1Ve`N?Lg31hWTn^2
+R3
+I5=T`>Kf=]RN`8nkIV^d[e3
+R4
+R0
+R5
+8../../rtl/clk_20MHz/bitmap_rom_tt.v
+F../../rtl/clk_20MHz/bitmap_rom_tt.v
+!i122 0
+R12
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdiv
+R1
+R2
+!i10b 1
+!s100 NfDTFzj8]1j2ILfE;L3C;2
+R3
+IS32YiF9:S]FA`A;:CMhGY3
+R4
+R0
+R5
+8../../rtl/clk_20MHz/div.v
+F../../rtl/clk_20MHz/div.v
+!i122 0
+L0 6 129
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdot4
+R1
+R2
+!i10b 1
+!s100 f9@eHUACTT0n9bD>XGPMO0
+R3
+ICN]Q^80cmQMYHgUW[hdGG1
+R4
+R0
+R5
+8../../rtl/clk_20MHz/dot4.v
+F../../rtl/clk_20MHz/dot4.v
+!i122 0
+L0 14 104
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+via
+R1
+R2
+!i10b 1
+!s100 `S6;>Vd[Q^=Ko:;W:=_lT3
+R3
+I7H_A^[j4Kj3f2No2MIc5d3
+R4
+R0
+R5
+8../../rtl/clk_20MHz/ia.v
+F../../rtl/clk_20MHz/ia.v
+!i122 0
+L0 6 65
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vraster
+R1
+R2
+!i10b 1
+!s100 JnkN=XN>JMb?=jU5?CCk>3
+R3
+IRbGHBQKz[Gf@cCAXfE:XU0
+R4
+R0
+R5
+8../../rtl/clk_20MHz/raster.v
+F../../rtl/clk_20MHz/raster.v
+!i122 0
+L0 12 313
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vslowmpy
+R1
+R2
+!i10b 1
+!s100 5gFDV@5RcC5bTHBKhBTjL1
+R3
+IH@n312iPOS_;iRT1jF@]B1
+R4
+R0
+R5
+8../../rtl/clk_20MHz/slowmpy.v
+F../../rtl/clk_20MHz/slowmpy.v
+!i122 0
+L0 52 104
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtb_top
+!s10a 1739329815
+!s110 1739329780
+!i10b 1
+!s100 E_;gPzeASZGKTM3[>KN7A2
+R3
+Ia6DYQCAji6hWn>O?lZ9NM0
+R4
+R0
+w1739329777
+8../../tb/tb_top.v
+F../../tb/tb_top.v
+!i122 7
+L0 1 31
+R6
+r1
+!s85 0
+31
+!s108 1739329780.000000
+!s107 ../../tb/tb_top.v|
+!s90 -reportprogress|300|+acc|-incr|../../tb/tb_top.v|
+!i113 1
+R10
+R11
+vtt_um_pongsagon_tiniest_gpu
+!s10a 1739374023
+!s110 1739329614
+!i10b 1
+!s100 =IYBF]z6XbI2a_WJFPz:Q3
+R3
+I@aM_XV8j_A;zQ]LU_0T;`2
+R4
+R0
+w1739329611
+8../../rtl/clk_20MHz/project.v
+F../../rtl/clk_20MHz/project.v
+!i122 6
+L0 8 485
+R6
+r1
+!s85 0
+31
+!s108 1739329614.000000
+R8
+R9
+!i113 1
+R10
+R11
+vuart_receiver
+R1
+R2
+!i10b 1
+!s100 Z7GRmblUJo4DHkjoXV8M70
+R3
+IJZS:]1]N?WH2nn<M;RZin0
+R4
+R0
+R5
+8../../rtl/clk_20MHz/uart_receiver.v
+F../../rtl/clk_20MHz/uart_receiver.v
+!i122 0
+L0 22 93
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vuart_top
+!s10a 1738988254
+R2
+!i10b 1
+!s100 =H?Q>YkCoD`DR4[BEljVo1
+R3
+IRzfITj86?9H?i:bBYR1Ee0
+R4
+R0
+w1738988254
+8../../rtl/clk_20MHz/uart_top.v
+F../../rtl/clk_20MHz/uart_top.v
+!i122 0
+L0 19 46
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vvga
+R1
+R2
+!i10b 1
+!s100 oDZ1S;KLID6I__FXR4h1m3
+R3
+INUm2R8:igC5nUg<jI=CWX3
+R4
+R0
+R5
+8../../rtl/clk_20MHz/vga.v
+F../../rtl/clk_20MHz/vga.v
+!i122 0
+L0 5 61
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vvs
+R1
+R2
+!i10b 1
+!s100 HbTN06CIV8n9Z;:efKg>L0
+R3
+IB0]khB6<?RVgke1<hAcO>3
+R4
+R0
+R5
+8../../rtl/clk_20MHz/vs.v
+F../../rtl/clk_20MHz/vs.v
+!i122 0
+L0 13 1317
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

@@ -362,6 +362,8 @@ int main()
     SDL_Window* gWindow;
     gWindow = SDL_CreateWindow("UART", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 200, 200, SDL_WINDOW_SHOWN);
 
+    SDL_SetHint(SDL_HINT_VIDEODRIVER, "offscreen");
+
     SDL_Event event;
 
     bool quit = 0;
