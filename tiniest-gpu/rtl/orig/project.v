@@ -329,6 +329,7 @@ module tt_um_pongsagon_tiniest_gpu (
     wire signed [19:0] e0_init_t2;
 	wire signed [19:0] e1_init_t2;
 	wire signed [19:0] e2_init_t2;
+	wire [9:0] x, y;
 
 	vs vs1(.clk(clk),.reset(reset),.x(x),.y(y),.pc_data_ready(pc_data_ready),
 					.x_world_v0(x_world_v0),.y_world_v0(y_world_v0),.z_world_v0(z_world_v0),
@@ -356,7 +357,6 @@ module tt_um_pongsagon_tiniest_gpu (
 
 	wire hsync;
 	wire vsync;
-	wire [9:0] x, y;
 	wire blank;
 	vga v(.clk (clk),.reset(reset), .HS (hsync),.VS (vsync), .x (x), .y (y), .blank (blank));
 

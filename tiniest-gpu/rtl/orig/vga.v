@@ -45,15 +45,8 @@ module vga(
 			prescaler <= prescaler + 1;
 			if (prescaler == 1) begin		// do every 25Mhz, 
 				prescaler <= 0;	
-				if (xc == 799) begin
-					xc_next <= 0;
-					yc_next <= yc + 1;
-				end else begin
-					xc_next <= xc + 1;
-				end
-				if (yc == 524) begin
-					yc_next <= 0;
-				end
+				xc_next = (xc == 'd799) ? 'd0 : (xc + 'd1);
+				yc_next = (xc == 'd799) ? ((yc == 'd524) ? 'd0 : (yc + 'd1)) : yc;
 			end
 			xc <= xc_next;
 			yc <= yc_next;

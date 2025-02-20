@@ -1,16 +1,9 @@
-##################################################
-#  Modelsim do file to run simuilation
-#  MS 7/2015
-##################################################
-
-vlib work 
+vlib work
 vmap work work
 
-# Include Netlist and Testbench
-vlog +acc -incr ../../rtl/clk_20MHz/*.v
-vlog +acc -incr ../../tb/tb_top.v
+vlog +acc -incr -dpiheader ../../sw/dpi/tb_dpi/dpiheader.h ../../sw/dpi/tb_dpi/main.cpp ../../tb/top/tb_top.sv
+vlog +acc -incr ../../rtl/orig/*.v
+vsim +acc -t ps -lib work -c tb_top
 
-# Run Simulator 
-vsim +acc -t ps -lib work tb_top 
-do waveformat.do   
+add wave -noupdate -r /tb_top/*
 run -all
