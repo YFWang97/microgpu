@@ -1,373 +1,373 @@
 m255
 K4
 z2
-!s11f vlog 2024.2 2024.05, May 20 2024
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/courses/ee6350/proj_2025Spring/microgpu/shared/tiniest-gpu/qsim_rtl/top
+Z0 d/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/qsim_rtl/top
 vbaud_rate_generator
-Z1 2../../rtl/orig/baud_rate_generator.v|../../rtl/orig/bitmap_rom_ddct.v|../../rtl/orig/bitmap_rom_sk.v|../../rtl/orig/bitmap_rom_tt.v|../../rtl/orig/div.v|../../rtl/orig/dot4.v|../../rtl/orig/ia.v|../../rtl/orig/project.v|../../rtl/orig/raster.v|../../rtl/orig/slowmpy.v|../../rtl/orig/uart_receiver.v|../../rtl/orig/uart_top.v|../../rtl/orig/vga.v|../../rtl/orig/vs.v
-Z2 !s10a 1740003971
-Z3 !s110 1740004250
+!s10a 1740028501
+!s110 1740028569
 !i10b 1
 !s100 8d4JRAKWE6`RHbCC9CKR?1
-IkzHYf;6jS6gTfF0_KP<Oz1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@Moi6NJNP_d[3Q@D=A;>U3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1740003971
+w1740028501
 8../../rtl/orig/baud_rate_generator.v
 F../../rtl/orig/baud_rate_generator.v
-!i122 1
+!i122 20
 L0 35 29
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OP;L;2024.2;79
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1740004249.000000
-Z8 !s107 ../../rtl/orig/vs.v|../../rtl/orig/vga.v|../../rtl/orig/uart_top.v|../../rtl/orig/uart_receiver.v|../../rtl/orig/slowmpy.v|../../rtl/orig/raster.v|../../rtl/orig/project.v|../../rtl/orig/ia.v|../../rtl/orig/dot4.v|../../rtl/orig/div.v|../../rtl/orig/bitmap_rom_tt.v|../../rtl/orig/bitmap_rom_sk.v|../../rtl/orig/bitmap_rom_ddct.v|../../rtl/orig/baud_rate_generator.v|
-Z9 !s90 -reportprogress|300|+acc|-incr|../../rtl/orig/baud_rate_generator.v|../../rtl/orig/bitmap_rom_ddct.v|../../rtl/orig/bitmap_rom_sk.v|../../rtl/orig/bitmap_rom_tt.v|../../rtl/orig/div.v|../../rtl/orig/dot4.v|../../rtl/orig/ia.v|../../rtl/orig/project.v|../../rtl/orig/raster.v|../../rtl/orig/slowmpy.v|../../rtl/orig/uart_receiver.v|../../rtl/orig/uart_top.v|../../rtl/orig/vga.v|../../rtl/orig/vs.v|
+!s108 1740028569.000000
+Z4 !s107 ../../rtl/orig/vs.v|../../rtl/orig/vga.v|../../rtl/orig/uart_top.v|../../rtl/orig/uart_receiver.v|../../rtl/orig/slowmpy.v|../../rtl/orig/raster.v|../../rtl/orig/project.v|../../rtl/orig/ia.v|../../rtl/orig/dot4.v|../../rtl/orig/div.v|../../rtl/orig/bitmap_rom_tt.v|../../rtl/orig/bitmap_rom_sk.v|../../rtl/orig/bitmap_rom_ddct.v|../../rtl/orig/baud_rate_generator.v|
+Z5 !s90 -reportprogress|300|+acc|-incr|../../rtl/orig/baud_rate_generator.v|../../rtl/orig/bitmap_rom_ddct.v|../../rtl/orig/bitmap_rom_sk.v|../../rtl/orig/bitmap_rom_tt.v|../../rtl/orig/div.v|../../rtl/orig/dot4.v|../../rtl/orig/ia.v|../../rtl/orig/project.v|../../rtl/orig/raster.v|../../rtl/orig/slowmpy.v|../../rtl/orig/uart_receiver.v|../../rtl/orig/uart_top.v|../../rtl/orig/vga.v|../../rtl/orig/vs.v|
 !i113 1
-Z10 o+acc
-Z11 tCvgOpt 0
+Z6 o+acc
+Z7 tCvgOpt 0
 vbitmap_rom_ddct
-R1
-R2
-R3
+Z8 !s10a 1738815139
+Z9 !s110 1740016411
 !i10b 1
 !s100 7ZLGO7zKcC<^mR2A;MEKH1
-ITe5;PHX4UNY`;nSn>M^OK0
+R1
+I0oLJV_?XO@4OZkCon47Vh1
+R2
 R0
-R4
+Z10 w1738815139
 8../../rtl/orig/bitmap_rom_ddct.v
 F../../rtl/orig/bitmap_rom_ddct.v
 !i122 1
-Z12 L0 2 2062
-R5
-R6
+Z11 L0 2 2062
+R3
 r1
 !s85 0
 31
+Z12 !s108 1740016411.000000
+R4
+R5
+!i113 1
+R6
 R7
+vbitmap_rom_sk
 R8
 R9
-!i113 1
-R10
-R11
-vbitmap_rom_sk
-R1
-R2
-R3
 !i10b 1
 !s100 fFPb?2M8e<JFgN6jn=W@G2
-I`K`PRD8TXoUYgTSTOLLj72
+R1
+IP6EFR]?_XaIZBfCig4h^X1
+R2
 R0
-R4
+R10
 8../../rtl/orig/bitmap_rom_sk.v
 F../../rtl/orig/bitmap_rom_sk.v
 !i122 1
-R12
-R5
-R6
+R11
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vbitmap_rom_tt
 R8
 R9
-!i113 1
-R10
-R11
-vbitmap_rom_tt
-R1
-R2
-R3
 !i10b 1
 !s100 HXJ4UQ1Ve`N?Lg31hWTn^2
-Ib15a4b0GSA?V6cn6GBNPn1
+R1
+Ig7:^3`o5z3L<T]zM:DF2P2
+R2
 R0
-R4
+R10
 8../../rtl/orig/bitmap_rom_tt.v
 F../../rtl/orig/bitmap_rom_tt.v
 !i122 1
-R12
-R5
-R6
+R11
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vdiv
 R8
 R9
-!i113 1
-R10
-R11
-vdiv
-R1
-R2
-R3
 !i10b 1
 !s100 NfDTFzj8]1j2ILfE;L3C;2
-I2FPX=<VzY6b5iML4MB=<Y1
+R1
+I@=aUMlmIn35^z>RJ?3UM83
+R2
 R0
-R4
+R10
 8../../rtl/orig/div.v
 F../../rtl/orig/div.v
 !i122 1
 L0 6 129
-R5
-R6
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vdot4
 R8
 R9
-!i113 1
-R10
-R11
-vdot4
-R1
-R2
-R3
 !i10b 1
 !s100 f9@eHUACTT0n9bD>XGPMO0
-I]D1V3A>]mBdOZR_FZZ`lK1
+R1
+IQHez@SaN23GS=MoObI`eS0
+R2
 R0
-R4
+R10
 8../../rtl/orig/dot4.v
 F../../rtl/orig/dot4.v
 !i122 1
 L0 14 104
-R5
-R6
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+via
 R8
 R9
-!i113 1
-R10
-R11
-via
-R1
-R2
-R3
 !i10b 1
 !s100 `S6;>Vd[Q^=Ko:;W:=_lT3
-ISi7IJR^S[HcYM?@SR6:B12
+R1
+IX?55Sa;;b4eHcE:?R@lX`1
+R2
 R0
-R4
+R10
 8../../rtl/orig/ia.v
 F../../rtl/orig/ia.v
 !i122 1
 L0 6 65
-R5
-R6
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vraster
 R8
 R9
-!i113 1
-R10
-R11
-vraster
-R1
-R2
-R3
 !i10b 1
-!s100 ?mQan0^c<Q_VznWIJKcJR2
-IQ`23E_[V@HF03_CEbCUl[0
+!s100 JnkN=XN>JMb?=jU5?CCk>3
+R1
+ISngG95_?@Vn<cY]gSn7F`1
+R2
 R0
-R4
+R10
 8../../rtl/orig/raster.v
 F../../rtl/orig/raster.v
 !i122 1
 L0 12 313
-R5
-R6
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vslowmpy
 R8
 R9
-!i113 1
-R10
-R11
-vslowmpy
-R1
-R2
-R3
 !i10b 1
 !s100 5gFDV@5RcC5bTHBKhBTjL1
-IYoHb:KRS2g?k?bYL<CLY]0
+R1
+I5eSWPBeI=XDRN0I3K[:?52
+R2
 R0
-R4
+R10
 8../../rtl/orig/slowmpy.v
 F../../rtl/orig/slowmpy.v
 !i122 1
 L0 52 104
-R5
-R6
+R3
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R4
+R5
 !i113 1
-R10
-R11
+R6
+R7
 vtb_top
-2../../tb/top/tb_top.sv
-!s10a 1740003762
-DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1740004249
+!s10a 1740036438
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1740036440
 !i10b 1
-!s100 zLaiDWn;AG3MQ1K`kQkYX0
-IkHZdaO^4]C@WN_iC5RmOL2
+!s100 9``k7_1M:fB_YAZQ^<S2A3
+R1
+I<_P?KS>5c5zic18z:fa>^1
+R2
 S1
 R0
-w1740003762
+w1740036438
 8../../tb/top/tb_top.sv
 F../../tb/top/tb_top.sv
-!i122 0
-L0 1 102
-R5
-R6
+!i122 42
+L0 1 131
+R3
 r1
 !s85 0
 31
-R7
+!s108 1740036440.000000
 !s107 ../../tb/top/tb_top.sv|
-!s90 -reportprogress|300|+acc|-incr|../../tb/top/tb_top.sv|
+!s90 -reportprogress|300|+acc|-incr|-dpiheader|../../sw/dpi/tb_dpi/dpiheader.h|../../sw/dpi/tb_dpi/main.cpp|../../tb/top/tb_top.sv|
 !i113 1
-R10
-R11
+R6
+R7
 vtt_um_pongsagon_tiniest_gpu
-R1
-R2
-R3
+Z13 !s10a 1740016065
+R9
 !i10b 1
-!s100 W7@1[W6;AZkFa;k83iE152
-I:Y06D]J<P3RQ@b@Dg9c0C3
+!s100 ZJl`eeNUd8^lNi=[Jf<@D2
+R1
+ImbJ839QfJ4fR_[G<6lF^h1
+R2
 R0
-R4
+Z14 w1740016065
 8../../rtl/orig/project.v
 F../../rtl/orig/project.v
 !i122 1
 L0 8 440
-R5
-R6
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vuart_receiver
 R8
 R9
-!i113 1
-R10
-R11
-vuart_receiver
-R1
-R2
-R3
 !i10b 1
 !s100 Z7GRmblUJo4DHkjoXV8M70
-I;jVeCN8hkca?74k9kl>`81
+R1
+I>FBYQZL2316>d?13C=h9S1
+R2
 R0
-R4
+R10
 8../../rtl/orig/uart_receiver.v
 F../../rtl/orig/uart_receiver.v
 !i122 1
 L0 22 93
-R5
-R6
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vuart_top
 R8
 R9
-!i113 1
-R10
-R11
-vuart_top
-R1
-R2
-R3
 !i10b 1
 !s100 >;6XYi_RFL7z]cFOhPglo3
-ImQPAEk3iQT7n1n?@aW50c2
+R1
+IM7amhJCfJW;UAFl<bi2g=0
+R2
 R0
-R4
+R10
 8../../rtl/orig/uart_top.v
 F../../rtl/orig/uart_top.v
 !i122 1
 L0 19 42
-R5
-R6
+R3
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R4
+R5
 !i113 1
-R10
-R11
+R6
+R7
 vvga
-R1
-R2
-R3
+R13
+R9
 !i10b 1
 !s100 4?GgVOJ__7KEf[3N40a;80
-IMfznDF[T`hLZfSn6=b3@m1
+R1
+II6<Z4A:oTXUoIMg2ma0bH0
+R2
 R0
-R4
+R14
 8../../rtl/orig/vga.v
 F../../rtl/orig/vga.v
 !i122 1
 L0 5 54
-R5
-R6
+R3
 r1
 !s85 0
 31
+R12
+R4
+R5
+!i113 1
+R6
 R7
+vvs
 R8
 R9
-!i113 1
-R10
-R11
-vvs
-R1
-R2
-R3
 !i10b 1
-!s100 GQMLcOgj0:TKF];]kfNE30
-IR@CCl6OM]8n:5?V2b_I7[0
+!s100 HbTN06CIV8n9Z;:efKg>L0
+R1
+I3SI`h8QfRnizMPS2zCehA2
+R2
 R0
-R4
+R10
 8../../rtl/orig/vs.v
 F../../rtl/orig/vs.v
 !i122 1
 L0 13 1317
-R5
-R6
+R3
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R4
+R5
 !i113 1
-R10
-R11
+R6
+R7

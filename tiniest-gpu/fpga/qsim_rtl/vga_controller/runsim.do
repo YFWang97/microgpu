@@ -7,7 +7,8 @@ vlib work
 vmap work work
 
 # Include Netlist and Testbench
-vlog +acc -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/*.v
+vlog +acc -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v
+vlog +acc -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga.v
 vlog +acc -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v
 
 # Run Simulator 

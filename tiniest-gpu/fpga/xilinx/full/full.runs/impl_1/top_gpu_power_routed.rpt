@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date             : Thu Feb 13 01:08:14 2025
+| Date             : Wed Feb 19 02:38:18 2025
 | Host             : Wangs-Linux running 64-bit Ubuntu 24.04.2 LTS
 | Command          : report_power -file top_gpu_power_routed.rpt -pb top_gpu_power_summary_routed.pb -rpx top_gpu_power_routed.rpx
 | Design           : top_gpu
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.181        |
+| Total On-Chip Power (W)  | 0.179        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.119        |
+| Dynamic (W)              | 0.117        |
 | Device Static (W)        | 0.062        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 99.1         |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        8 |       --- |             --- |
-| Slice Logic    |     0.004 |     6873 |       --- |             --- |
-|   LUT as Logic |     0.004 |     3254 |     20800 |           15.64 |
+| Clocks         |     0.003 |        8 |       --- |             --- |
+| Slice Logic    |     0.004 |     5624 |       --- |             --- |
+|   LUT as Logic |     0.003 |     2668 |     20800 |           12.83 |
 |   CARRY4       |    <0.001 |      328 |      8150 |            4.02 |
-|   Register     |    <0.001 |     2524 |     41600 |            6.07 |
-|   F7/F8 Muxes  |    <0.001 |      123 |     32600 |            0.38 |
-|   Others       |     0.000 |       24 |       --- |             --- |
-| Signals        |     0.004 |     5165 |       --- |             --- |
+|   Register     |    <0.001 |     1977 |     41600 |            4.75 |
+|   F7/F8 Muxes  |    <0.001 |       36 |     32600 |            0.11 |
+|   Others       |     0.000 |       20 |       --- |             --- |
+| Signals        |     0.004 |     4138 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       27 |       106 |           25.47 |
+| I/O            |    <0.001 |       26 |       106 |           24.53 |
 | Static Power   |     0.062 |          |           |                 |
-| Total          |     0.181 |          |           |                 |
+| Total          |     0.179 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.019 |       0.013 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.018 |       0.012 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.070 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,9 +147,9 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| top_gpu         |     0.119 |
-|   gpu           |     0.012 |
-|     raster1     |     0.003 |
+| top_gpu         |     0.117 |
+|   gpu           |     0.010 |
+|     raster1     |     0.002 |
 |     vs1         |     0.008 |
 |       div1      |     0.001 |
 |   instance_name |     0.106 |

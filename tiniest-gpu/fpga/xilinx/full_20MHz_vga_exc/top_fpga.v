@@ -53,7 +53,7 @@ module top_gpu (
         .vga_data_valid_in(vga_data_valid),
         .vga_data_in(vga_data),
         .vga_ready_out(vga_ready),
-        .vsync(uio_out[3]),
+        .vsync(uio_out[6]),
         .hsync(uio_out[7]),
         .rgb(rgb)
     );
@@ -68,20 +68,33 @@ module top_gpu (
 
     //assign rgb = blank ? 6'd0 : 6'b010101;
 
-    assign uio_out[7] = hsync;
-    assign uio_out[3] = vsync;
+    //assign uio_out[7] = hsync;
+    //assign uio_out[3] = vsync;
 
-    assign uio_out[0] = rgb[1];
-    assign uio_out[1] = rgb[3];
-    assign uio_out[2] = rgb[5];
-    assign uio_out[4] = rgb[0];
-    assign uio_out[5] = rgb[2];
-    assign uio_out[6] = rgb[4];
+    assign uio_out[0] = rgb[0];
+    assign uio_out[1] = rgb[1];
+    assign uio_out[2] = rgb[2];
+    assign uio_out[3] = rgb[3];
+    assign uio_out[4] = rgb[4];
+    assign uio_out[5] = rgb[5];
     
     //assign {uio_out[6], uio_out[5], uio_out[4], uio_out[2], uio_out[1], uio_out[0]} = rgb;
 
-    assign uio_oe = 8'b1010_0011;
-    assign uo_out = 8'b0101_1111;
+    reg debug_vga_data_valid;
+    reg debug_vga_ready;
+    reg [5:0] debug_vga_data;
+
+    assign uio_oe = 8'b11000011;
+    assign uo_out[0] = debug_vga_data_valid;
+    assign uo_out[1] = debug_vga_ready;
+    assign uo_out[2+:6] = debug_vga_data;
+    
+    always @(posedge clk) begin
+        if (vga_data_valid) debug_vga_data_valid <= 1;
+        if (vga_ready) debug_vga_ready <= 1;
+        if (vga_data != 0) debug_vga_data <= 6'b110011;
+    end
+    
 
 endmodule
 

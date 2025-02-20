@@ -265,7 +265,7 @@ module raster(
 										end
 									end
 									default:begin
-										rgb <= 6'b00_00000;
+										rgb <= 6'b110000;
 									end
 								endcase
 							end
@@ -286,7 +286,7 @@ module raster(
 						end
 					endcase
 				end 
-				else if (x == 799) begin
+				else if (x == 640) begin
 					// update e0 = e0_init; each line
 					e0_t1 <= e0_init_t1;
 					e1_t1 <= e1_init_t1;
@@ -302,7 +302,7 @@ module raster(
 					b2_iz <= bar2_iz;
 				end 	
 			end 	// y < 480
-			else if ((y == 524) && (x == 799)) begin
+			else if ((y == 480) && (x == 640)) begin
 				// update e0 = e0_init; each frame, before begin line y = 0
 				e0_t1 <= e0_init_t1;
 				e1_t1 <= e1_init_t1;

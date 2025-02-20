@@ -7,12 +7,12 @@
   **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Thu Feb 13 01:06:17 2025
+  **** Start of session at: Wed Feb 19 02:36:25 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top_gpu.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1411.922 ; gain = 0.027 ; free physical = 3312 ; free virtual = 12842
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1412.953 ; gain = 0.027 ; free physical = 2183 ; free virtual = 10941
 Command: read_checkpoint -auto_incremental -incremental /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/utils_1/imports/synth_1/top_gpu.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.srcs/utils_1/imports/synth_1/top_gpu.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -26,18 +26,18 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 237783
+INFO: [Synth 8-7075] Helper process launched with PID 3735825
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2121.770 ; gain = 412.746 ; free physical = 2204 ; free virtual = 11735
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2128.770 ; gain = 419.746 ; free physical = 1153 ; free virtual = 9912
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'x', assumed default net type 'wire' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:333]
-INFO: [Synth 8-11241] undeclared symbol 'y', assumed default net type 'wire' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:333]
-WARNING: [Synth 8-8895] 'x' is already implicitly declared on line 333 [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:359]
-WARNING: [Synth 8-8895] 'y' is already implicitly declared on line 333 [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:359]
+INFO: [Synth 8-11241] undeclared symbol 'x', assumed default net type 'wire' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:370]
+INFO: [Synth 8-11241] undeclared symbol 'y', assumed default net type 'wire' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:370]
+WARNING: [Synth 8-8895] 'x' is already implicitly declared on line 370 [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:396]
+WARNING: [Synth 8-8895] 'y' is already implicitly declared on line 370 [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:396]
 INFO: [Synth 8-11241] undeclared symbol 'clk_50', assumed default net type 'wire' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/top_fpga.v:22]
 INFO: [Synth 8-6157] synthesizing module 'top_gpu' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/top_fpga.v:8]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.runs/synth_1/.Xil/Vivado-237725-Wangs-Linux/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.runs/synth_1/.Xil/Vivado-237725-Wangs-Linux/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.runs/synth_1/.Xil/Vivado-3735767-Wangs-Linux/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.runs/synth_1/.Xil/Vivado-3735767-Wangs-Linux/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'tt_um_pongsagon_tiniest_gpu' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:8]
 INFO: [Synth 8-6157] synthesizing module 'ia' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/ia.v:6]
 INFO: [Synth 8-6157] synthesizing module 'uart_top' [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/uart_top.v:19]
@@ -78,6 +78,24 @@ INFO: [Synth 8-6155] done synthesizing module 'vga' (0#1) [/home/yangfan/Desktop
 INFO: [Synth 8-6155] done synthesizing module 'tt_um_pongsagon_tiniest_gpu' (0#1) [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:8]
 INFO: [Synth 8-6155] done synthesizing module 'top_gpu' (0#1) [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/top_fpga.v:8]
 WARNING: [Synth 8-6014] Unused sequential element back_face_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/raster.v:97]
+WARNING: [Synth 8-6014] Unused sequential element z_world_v3_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:89]
+WARNING: [Synth 8-6014] Unused sequential element nx_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:90]
+WARNING: [Synth 8-6014] Unused sequential element ny_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:91]
+WARNING: [Synth 8-6014] Unused sequential element light_x_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:93]
+WARNING: [Synth 8-6014] Unused sequential element light_y_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:94]
+WARNING: [Synth 8-6014] Unused sequential element vp_01_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:97]
+WARNING: [Synth 8-6014] Unused sequential element vp_02_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:98]
+WARNING: [Synth 8-6014] Unused sequential element vp_03_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:99]
+WARNING: [Synth 8-6014] Unused sequential element vp_10_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:100]
+WARNING: [Synth 8-6014] Unused sequential element vp_12_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:102]
+WARNING: [Synth 8-6014] Unused sequential element vp_13_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:103]
+WARNING: [Synth 8-6014] Unused sequential element vp_30_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:104]
+WARNING: [Synth 8-6014] Unused sequential element vp_31_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:105]
+WARNING: [Synth 8-6014] Unused sequential element x_world_v1_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:81]
+WARNING: [Synth 8-6014] Unused sequential element y_world_v2_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:85]
+WARNING: [Synth 8-6014] Unused sequential element z_world_v2_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:86]
+WARNING: [Synth 8-6014] Unused sequential element x_world_v3_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:87]
+WARNING: [Synth 8-6014] Unused sequential element y_world_v3_reg was removed.  [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/project.v:88]
 WARNING: [Synth 8-7129] Port ui_in[7] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ui_in[6] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ui_in[5] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
@@ -95,18 +113,18 @@ WARNING: [Synth 8-7129] Port uio_in[1] in module tt_um_pongsagon_tiniest_gpu is 
 WARNING: [Synth 8-7129] Port uio_in[0] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ena in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2245.707 ; gain = 536.684 ; free physical = 2052 ; free virtual = 11583
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2238.707 ; gain = 529.684 ; free physical = 1008 ; free virtual = 9771
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2263.520 ; gain = 554.496 ; free physical = 2051 ; free virtual = 11583
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2256.520 ; gain = 547.496 ; free physical = 1009 ; free virtual = 9772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2263.520 ; gain = 554.496 ; free physical = 2051 ; free virtual = 11583
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2256.520 ; gain = 547.496 ; free physical = 1009 ; free virtual = 9772
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2263.520 ; gain = 0.000 ; free physical = 2053 ; free virtual = 11585
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2256.520 ; gain = 0.000 ; free physical = 1014 ; free virtual = 9774
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -119,22 +137,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_gpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2408.270 ; gain = 0.000 ; free physical = 2061 ; free virtual = 11592
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2406.270 ; gain = 0.000 ; free physical = 999 ; free virtual = 9759
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2408.270 ; gain = 0.000 ; free physical = 2060 ; free virtual = 11592
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2406.270 ; gain = 0.000 ; free physical = 999 ; free virtual = 9759
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2408.270 ; gain = 699.246 ; free physical = 2084 ; free virtual = 11617
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2406.270 ; gain = 697.246 ; free physical = 989 ; free virtual = 9749
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2084 ; free virtual = 11617
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 989 ; free virtual = 9749
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -143,7 +161,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/yang
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for instance_name. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2084 ; free virtual = 11617
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 989 ; free virtual = 9749
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_receiver'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ia'
@@ -303,7 +321,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_ei_frame_reg' using 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_pixel_reg' using encoding 'sequential' in module 'raster'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2061 ; free virtual = 11595
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 987 ; free virtual = 9750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -342,9 +360,9 @@ Detailed RTL Component Info :
 	               31 Bit    Registers := 3     
 	               22 Bit    Registers := 22    
 	               20 Bit    Registers := 38    
-	               16 Bit    Registers := 56    
+	               16 Bit    Registers := 39    
 	               10 Bit    Registers := 4     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 3     
 	                7 Bit    Registers := 3     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 2     
@@ -386,12 +404,11 @@ Detailed RTL Component Info :
 	   2 Input    3 Bit        Muxes := 6     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 49    
+	   2 Input    1 Bit        Muxes := 47    
 	   4 Input    1 Bit        Muxes := 7     
 	   5 Input    1 Bit        Muxes := 36    
 	  33 Input    1 Bit        Muxes := 23    
 	  51 Input    1 Bit        Muxes := 23    
-	  62 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -409,24 +426,43 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3936] Found unconnected internal register 'mul2/o_p_reg' and it is trimmed from '32' to '24' bits. [/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/orig/slowmpy.v:147]
-WARNING: [Synth 8-7129] Port ui_in[7] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ui_in[6] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ui_in[5] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ui_in[4] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ui_in[2] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ui_in[1] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ui_in[0] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[7] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[6] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[5] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[4] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[3] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[2] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[1] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uio_in[0] in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ena in module tt_um_pongsagon_tiniest_gpu is either unconnected or has no load
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[7] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[6] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[5] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[4] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[3] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[2] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[1] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uo_out[0] driven by constant 0
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[7] driven by constant 1
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[4] driven by constant 1
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[1] driven by constant 1
+WARNING: [Synth 8-3917] design top_gpu has port uio_oe[0] driven by constant 1
+WARNING: [Synth 8-7129] Port ui_in[7] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ui_in[6] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ui_in[5] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ui_in[4] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ui_in[2] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ui_in[1] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ui_in[0] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[7] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[6] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[5] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[4] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[3] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[2] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[1] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uio_in[0] in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ena in module top_gpu is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (gpu/ia1/UART_UNIT/UART_RX_UNIT/FSM_sequential_state_reg[1]) is unused and will be removed from module top_gpu.
+WARNING: [Synth 8-3332] Sequential element (gpu/ia1/UART_UNIT/UART_RX_UNIT/FSM_sequential_state_reg[0]) is unused and will be removed from module top_gpu.
+WARNING: [Synth 8-3332] Sequential element (gpu/ia1/FSM_sequential_state_reg) is unused and will be removed from module top_gpu.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 1945 ; free virtual = 11490
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 935 ; free virtual = 9702
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -447,19 +483,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2066 ; free virtual = 11612
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 934 ; free virtual = 9701
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2054 ; free virtual = 11600
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 933 ; free virtual = 9704
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2052 ; free virtual = 11598
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 947 ; free virtual = 9714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -477,37 +513,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2125 ; free virtual = 11671
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 947 ; free virtual = 9715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2125 ; free virtual = 11671
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 947 ; free virtual = 9715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2163 ; free virtual = 11709
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 947 ; free virtual = 9715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2163 ; free virtual = 11709
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 947 ; free virtual = 9715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2151 ; free virtual = 11698
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 947 ; free virtual = 9715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2149 ; free virtual = 11696
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 949 ; free virtual = 9716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -526,43 +562,42 @@ Report Cell Usage:
 +------+--------+------+
 |1     |clk_wiz |     1|
 |2     |CARRY4  |   328|
-|3     |LUT1    |   107|
-|4     |LUT2    |  1013|
-|5     |LUT3    |   706|
-|6     |LUT4    |   522|
-|7     |LUT5    |   350|
-|8     |LUT6    |  1176|
-|9     |MUXF7   |    96|
-|10    |MUXF8   |    27|
-|11    |FDRE    |  2513|
-|12    |FDSE    |    11|
-|13    |IBUF    |     2|
-|14    |OBUF    |    24|
+|3     |LUT1    |   106|
+|4     |LUT2    |  1009|
+|5     |LUT3    |   638|
+|6     |LUT4    |   582|
+|7     |LUT5    |   237|
+|8     |LUT6    |   691|
+|9     |MUXF7   |    36|
+|10    |FDRE    |  1966|
+|11    |FDSE    |    11|
+|12    |IBUF    |     1|
+|13    |OBUF    |    24|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2416.273 ; gain = 707.250 ; free physical = 2147 ; free virtual = 11693
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2414.273 ; gain = 705.250 ; free physical = 949 ; free virtual = 9717
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2416.273 ; gain = 562.500 ; free physical = 2151 ; free virtual = 11697
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2416.281 ; gain = 707.250 ; free physical = 2151 ; free virtual = 11697
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2414.273 ; gain = 555.500 ; free physical = 952 ; free virtual = 9720
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2414.281 ; gain = 705.250 ; free physical = 952 ; free virtual = 9720
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2416.281 ; gain = 0.000 ; free physical = 2457 ; free virtual = 12004
-INFO: [Netlist 29-17] Analyzing 451 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2414.281 ; gain = 0.000 ; free physical = 1295 ; free virtual = 10063
+INFO: [Netlist 29-17] Analyzing 364 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2472.301 ; gain = 0.000 ; free physical = 2403 ; free virtual = 11950
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2470.301 ; gain = 0.000 ; free physical = 1270 ; free virtual = 10038
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: c444d113
+Synth Design complete | Checksum: c5550a8a
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:43 . Memory (MB): peak = 2472.301 ; gain = 1060.379 ; free physical = 2435 ; free virtual = 11982
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1911.504; main = 1524.578; forked = 415.609
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3522.219; main = 2472.305; forked = 1105.941
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2496.312 ; gain = 0.000 ; free physical = 2427 ; free virtual = 11974
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 2470.301 ; gain = 1057.348 ; free physical = 1270 ; free virtual = 10038
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1988.385; main = 1602.377; forked = 439.190
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3520.215; main = 2470.305; forked = 1105.938
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2494.312 ; gain = 0.000 ; free physical = 1270 ; free virtual = 10038
 INFO: [Common 17-1381] The checkpoint '/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/xilinx/full/full.runs/synth_1/top_gpu.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_gpu_utilization_synth.rpt -pb top_gpu_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 13 01:07:10 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 19 02:37:17 2025...

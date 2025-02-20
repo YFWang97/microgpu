@@ -4,6 +4,7 @@ module tb_top();
 	import "DPI-C" function void process_output(input byte vga);
 	import "DPI-C" function int c_init();
 	import "DPI-C" function int c_update();
+    import "DPI-C" function int c_get_command();
 
 	reg clk;
 	reg rst_n;
@@ -29,53 +30,54 @@ module tb_top();
 	task progress_clk_till_vsync_low();
 		forever begin
 			if (uio_out[3] == 0) break;
-			else #(CLK_PERIOD/2); clk = ~clk;
+            else begin
+                #(CLK_PERIOD/2); clk = ~clk;
+                #(CLK_PERIOD/2); clk = ~clk;
+            end
 		end
 	endtask
 
-	integer index;
-	integer bit_index;
-	integer x, y;
-	byte input_byte;
-	integer ret;
+    task progress_clk_till_next_uart_sample();
+        forever begin
+            if (tb_top.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick == 1) break;
+            else begin
+                #(CLK_PERIOD/2); clk = ~clk;
+                #(CLK_PERIOD/2); clk = ~clk;
+            end
+        end
+    endtask
 
-	initial begin
-		clk = 0;
-		rst_n = 0;
-		ena = 0;
-		progress_clk(3);
-		rst_n = 1;
-		ena = 1;
-	end
-
-	initial begin
-		@(posedge rst_n);
-		ret = c_init();
-		//progress_clk(10);
-		ret = c_update();
-		for (index = 0; index < 60; index = index + 1) begin
-			input_byte = get_input(index);
+    task configure();
+	    integer byte_index;
+        integer bit_index;
+	    byte input_byte;
+		for (byte_index = 0; byte_index < 60; byte_index = byte_index + 1) begin
+			input_byte = get_input(byte_index);
 			//$display("SV received id: %d, value: %d", index, input_byte);
-			ui_in[3] = 0;
+			ui_in[3] <= 0;
 			progress_clk(1);
 
-			ui_in[3] = 1;
-			progress_clk(8 * UART_DLY_CYCLE);
+			ui_in[3] <= 1;
+			progress_clk(8 * UART_DLY_CYCLE - 1);
 
 			for (bit_index = 0; bit_index < 8; bit_index = bit_index + 1) begin
-				ui_in[3] = input_byte[bit_index];
+				ui_in[3] <= input_byte[bit_index];
 				progress_clk(16 * UART_DLY_CYCLE);
 			end
 
 			progress_clk(16 * UART_DLY_CYCLE);
 		end
-		ui_in[3] = 1;
+		ui_in[3] <= 1;
 		progress_clk_till_vsync_low();
 		progress_clk(55999);
-	
-		index = 0;
+    endtask
 
-		for (y = 0; y < 524; y = y + 1) begin
+    task run_one_frame();
+        integer index;
+	    integer x, y;
+
+        index = 0;
+		for (y = 0; y < 525; y = y + 1) begin
 			for (x = 0; x < 800; x = x + 1) begin
 				if (x < 640 && y < 480) begin
 					process_output({{6'd0}, uio_out[0], uio_out[4]});
@@ -87,8 +89,35 @@ module tb_top();
 				progress_clk(2);
 			end
 		end
-	
-		$display("Configure Completed");	
+        $display("end run one frame %0t", $realtime);
+    endtask
+
+	integer ret;
+
+	initial begin
+		clk <= 1;
+		rst_n <= 0;
+		ena <= 0;
+		ui_in[3] <= 0;
+		progress_clk(3);
+		rst_n <= 1;
+		ena <= 1;
+	end
+
+    integer loop_index;
+
+	initial begin
+		@(posedge rst_n);
+		ret = c_init();
+		//progress_clk(10);
+        
+        for (loop_index = 0; loop_index < 12; loop_index = loop_index + 1) begin
+            ret = c_update();
+            configure();
+            run_one_frame();
+            progress_clk_till_next_uart_sample();
+            ret = c_get_command();
+        end
 	end
 
 	tt_um_pongsagon_tiniest_gpu gpu (

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Thu Feb 13 23:17:56 2025
+| Date         : Wed Feb 19 03:26:51 2025
 | Host         : Wangs-Linux running 64-bit Ubuntu 24.04.2 LTS
 | Command      : report_methodology -file top_gpu_methodology_drc_routed.rpt -pb top_gpu_methodology_drc_routed.pb -rpx top_gpu_methodology_drc_routed.rpx
 | Design       : top_gpu
@@ -23,13 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 19
+             Violations found: 18
 +-----------+------------------+------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                      | Violations |
 +-----------+------------------+------------------------------------------------------------------+------------+
 | TIMING-6  | Critical Warning | No common primary clock between related clocks                   | 14         |
 | TIMING-56 | Warning          | Missing logically or physically excluded clock groups constraint | 4          |
-| ULMTCS-2  | Warning          | Control Sets use limits require reduction                        | 1          |
 +-----------+------------------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -122,11 +121,6 @@ Related violations: <none>
 TIMING-56#4 Warning
 Missing logically or physically excluded clock groups constraint  
 Multiple clocks are user generated or auto-derived on the source pin instance_name/inst/mmcm_adv_inst/CLKOUT2 but are not logically or physically exclusive with respect to one another. To have the static timing analysis match the behavior in hardware, there cannot be multiple clocks generated on the same pin and when such situation occurs, the clocks should be defined as physically or logically exclusive. The list of clocks generated on the source pin is: clk_25_clk_wiz_0, clk_25_clk_wiz_0_1
-Related violations: <none>
-
-ULMTCS-2#1 Warning
-Control Sets use limits require reduction  
-This design uses 5149 control sets (vs. available limit of 8150, determined by 1 control set per CLB). This exceeds the control set use guideline of 15 percent. This is at a level where reduction is REQUIRED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 

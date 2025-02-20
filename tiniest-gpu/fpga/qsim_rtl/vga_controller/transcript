@@ -4,27 +4,29 @@
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:51:15 on Feb 12,2025
-# vlog -reportprogress 300 "+acc" -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v 
+# Start time: 12:29:05 on Feb 18,2025
+# vlog -reportprogress 300 "+acc" -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_50.v /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v 
+# -- Compiling module vga
+# ** Warning: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_50.v(5): (vlog-2275) Existing module 'vga' will be overwritten.
 # -- Compiling module vga
 # -- Compiling module vga_controller
 # 
 # Top level modules:
 # 	vga_controller
-# End time: 23:51:15 on Feb 12,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 12:29:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:51:15 on Feb 12,2025
+# Start time: 12:29:05 on Feb 18,2025
 # vlog -reportprogress 300 "+acc" -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v 
 # -- Skipping module tb_vga_controller
 # 
 # Top level modules:
 # 	tb_vga_controller
-# End time: 23:51:15 on Feb 12,2025, Elapsed time: 0:00:00
+# End time: 12:29:05 on Feb 18,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
 # vsim "+acc" -t ps -lib work tb_vga_controller 
-# Start time: 23:51:15 on Feb 12,2025
+# Start time: 12:29:05 on Feb 18,2025
 # Loading work.tb_vga_controller
 # Loading work.vga_controller
 # Loading work.vga
@@ -35,12 +37,109 @@
 # ** Warning: (vsim-3722) /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(9): [TFMPC] - Missing connection for port 'hsync'.
 # ** Warning: (vsim-3722) /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(9): [TFMPC] - Missing connection for port 'rgb'.
 # ** Note: $stop    : /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(44)
-#    Time: 10000020 ps  Iteration: 0  Instance: /tb_vga_controller
+#    Time: 1000000020 ps  Iteration: 0  Instance: /tb_vga_controller
+# Break in Module tb_vga_controller at /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v line 44
+do runsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:40:05 on Feb 18,2025
+# vlog -reportprogress 300 "+acc" -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v 
+# -- Skipping module vga_controller
+# 
+# Top level modules:
+# 	vga_controller
+# End time: 12:40:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:40:05 on Feb 18,2025
+# vlog -reportprogress 300 "+acc" -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga.v 
+# -- Compiling module vga
+# 
+# Top level modules:
+# 	vga
+# End time: 12:40:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:40:05 on Feb 18,2025
+# vlog -reportprogress 300 "+acc" -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v 
+# -- Skipping module tb_vga_controller
+# 
+# Top level modules:
+# 	tb_vga_controller
+# End time: 12:40:05 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:40:07 on Feb 18,2025, Elapsed time: 0:11:02
+# Errors: 0, Warnings: 6
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work tb_vga_controller 
+# Start time: 12:40:07 on Feb 18,2025
+# Loading work.tb_vga_controller
+# Loading work.vga_controller
+# Loading work.vga
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'vga_controller_inst'.  Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_vga_controller/vga_controller_inst File: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v Line: 9
+# ** Warning: (vsim-3722) /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(9): [TFMPC] - Missing connection for port 'vga_data_in'.
+# ** Warning: (vsim-3722) /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(9): [TFMPC] - Missing connection for port 'vsync'.
+# ** Warning: (vsim-3722) /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(9): [TFMPC] - Missing connection for port 'hsync'.
+# ** Warning: (vsim-3722) /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(9): [TFMPC] - Missing connection for port 'rgb'.
+# ** Note: $stop    : /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v(44)
+#    Time: 1000000020 ps  Iteration: 0  Instance: /tb_vga_controller
 # Break in Module tb_vga_controller at /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/tb/tb_vga_controller.v line 44
 # WARNING: No extended dataflow license exists
 # Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
 # Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
 # Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
 # Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# End time: 01:10:23 on Feb 13,2025, Elapsed time: 1:19:08
-# Errors: 0, Warnings: 6
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+exit
+do runsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:06:17 on Feb 18,2025
+# vlog -reportprogress 300 "+acc" -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v 
+# ** Error (suppressible): /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v(44): (vlog-2388) 'vga_ready_out_20' already declared in this scope (vga_controller) at /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v(7).
+# ** Error: /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v(51): (vlog-2730) Undefined variable: 'vga_ready_out_25'.
+# End time: 21:06:17 on Feb 18,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: /home/yangfan/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./runsim.do line 10
+# /home/yangfan/intelFPGA/20.1/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog +acc -incr /home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/fpga/rtl/vga_controller/vga_controller.v"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 21:06:54 on Feb 18,2025, Elapsed time: 8:26:47
+# Errors: 1, Warnings: 6

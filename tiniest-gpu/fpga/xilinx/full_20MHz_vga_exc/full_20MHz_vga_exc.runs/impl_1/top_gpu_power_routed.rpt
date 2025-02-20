@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date             : Thu Feb 13 23:18:11 2025
+| Date             : Wed Feb 19 03:26:53 2025
 | Host             : Wangs-Linux running 64-bit Ubuntu 24.04.2 LTS
 | Command          : report_power -file top_gpu_power_routed.rpt -pb top_gpu_power_summary_routed.pb -rpx top_gpu_power_routed.rpx
 | Design           : top_gpu
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.184        |
+| Total On-Chip Power (W)  | 0.177        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.122        |
+| Dynamic (W)              | 0.115        |
 | Device Static (W)        | 0.062        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 99.1         |
@@ -49,22 +49,23 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.008 |       12 |       --- |             --- |
-| Slice Logic    |     0.004 |    62442 |       --- |             --- |
-|   LUT as Logic |     0.003 |    17844 |     20800 |           85.79 |
-|   CARRY4       |    <0.001 |      334 |      8150 |            4.10 |
-|   Register     |    <0.001 |    32700 |     41600 |           78.61 |
-|   F7/F8 Muxes  |    <0.001 |     3219 |     32600 |            9.87 |
-|   Others       |     0.000 |       25 |       --- |             --- |
-| Signals        |     0.005 |    54528 |       --- |             --- |
-| MMCM           |     0.106 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       27 |       106 |           25.47 |
-| Static Power   |     0.062 |          |           |                 |
-| Total          |     0.184 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.003 |       12 |       --- |             --- |
+| Slice Logic              |     0.003 |     6139 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2795 |     20800 |           13.44 |
+|   CARRY4                 |    <0.001 |      337 |      8150 |            4.13 |
+|   Register               |    <0.001 |     2048 |     41600 |            4.92 |
+|   LUT as Distributed RAM |    <0.001 |      240 |      9600 |            2.50 |
+|   F7/F8 Muxes            |    <0.001 |       63 |     32600 |            0.19 |
+|   Others                 |     0.000 |       22 |       --- |             --- |
+| Signals                  |     0.003 |     4486 |       --- |             --- |
+| MMCM                     |     0.106 |        1 |         5 |           20.00 |
+| I/O                      |    <0.001 |       26 |       106 |           24.53 |
+| Static Power             |     0.062 |          |           |                 |
+| Total                    |     0.177 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -73,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.024 |       0.018 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.016 |       0.010 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.070 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -148,16 +149,15 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------+-----------+
-| Name                 | Power (W) |
-+----------------------+-----------+
-| top_gpu              |     0.122 |
-|   gpu                |     0.010 |
-|     raster1          |     0.004 |
-|     vs1              |     0.006 |
-|   instance_name      |     0.106 |
-|     inst             |     0.106 |
-|   vga_contoller_inst |     0.006 |
-+----------------------+-----------+
++-----------------+-----------+
+| Name            | Power (W) |
++-----------------+-----------+
+| top_gpu         |     0.115 |
+|   gpu           |     0.008 |
+|     raster1     |     0.002 |
+|     vs1         |     0.006 |
+|   instance_name |     0.106 |
+|     inst        |     0.106 |
++-----------------+-----------+
 
 

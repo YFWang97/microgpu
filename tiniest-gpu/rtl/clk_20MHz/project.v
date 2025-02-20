@@ -105,6 +105,42 @@ module tt_um_pongsagon_tiniest_gpu (
 			vp_33 <= 0;
 			render_mode <= 0;
 		end
+        else begin
+            x_world_v0  <= {8'hfe, 8'h58};
+            y_world_v0  <= {8'h1, 8'h0};
+            z_world_v0  <= {8'h0, 8'h0};
+            x_world_v1  <= {8'hfe, 8'h58};
+            y_world_v1  <= {8'hff, 8'h0};
+            z_world_v1  <= {{'d15-'d0}, 8'h0};
+            x_world_v2  <= {8'h1, 8'ha8};
+            y_world_v2  <= {8'hff, 8'h0};
+            z_world_v2  <= {{'d15-'d0}, 8'h0};
+            nx          <= {8'h0, 8'h0};
+            ny          <= {8'h0, 8'h0};
+            nz          <= {8'h0, 8'hff};
+            light_x     <= {8'h0, 8'h0};
+            light_y     <= {8'h0, 8'h0};
+            light_z     <= {8'd18, 8'hff};
+            vp_00       <= {8'h1, 8'h3a};
+            vp_01       <= {8'h0, 8'h0};
+            vp_02       <= {8'h0, 8'h0};
+            vp_03       <= {8'h0, 8'h0};
+            vp_10       <= {8'h0, 8'h0};
+            vp_11       <= {8'h2, 8'hc0};
+            vp_12       <= {8'h0, 8'h0};
+            vp_13       <= {8'h0, 8'h0};
+            vp_30       <= {8'h0, 8'h0};
+            vp_31       <= {8'h0, 8'h0};
+            vp_32       <= {8'hff, 8'h1};
+            vp_33       <= {8'h1d, 8'he2};
+            x_world_v3  <= {8'h1, 8'ha8};
+            y_world_v3  <= {8'h1, 8'h0};
+            z_world_v3  <= {8'h0, 8'h0};
+            render_mode <= 8'h38;
+
+            pc_data_ready <= 1;
+        end
+        /*
 		else begin
 			if (update_reg) begin
 				case(idx)
@@ -304,6 +340,7 @@ module tt_um_pongsagon_tiniest_gpu (
 
 		//! comment out for verilator
 		pc_data_ready <= pc_ready;
+        */
 	end
 
 	
@@ -369,17 +406,17 @@ module tt_um_pongsagon_tiniest_gpu (
         else begin
             if (vga_ready_in && ~vga_data_valid_out) begin
                 vga_data_valid_out <= 1;
+                x <= 'd0;
+                y <= 'd0;
             end
             else begin
                 if (x == 'd639 && y == 'd479) begin
                     vga_data_valid_out <= 0;
                 end
+                x <= (x == 'd650) ? 'd0 : (x + 'd1);
+                y <= (x == 'd650) ? ((y == 'd480) ? 'd0 : (y + 'd1)) : y;
             end
 
-            if (vga_data_valid_out) begin
-                x <= (x == 'd639) ? 'd0 : (x + 'd1);
-                y <= (x == 'd639) ? ((y == 'd479) ? 'd0 : (y + 'd1)) : y;
-            end
         end
     end
 
@@ -397,7 +434,7 @@ module tt_um_pongsagon_tiniest_gpu (
                 vga_data_out[5] = rgb[4];
             end
             else begin
-                vga_data_out = 'd0;
+                vga_data_out = 'd55;
             end
         end
     end
