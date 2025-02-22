@@ -12,7 +12,7 @@ for raw_file_name in raw_file_list:
 
     # Open the file in read mode
     with open(raw_file_name, 'r') as file:
-        data_into_list = file.read().rstrip().split(" ") 
+        data_into_list = file.read().rstrip().split("\n") 
 
     x = 0
     y = 0
@@ -35,6 +35,8 @@ for raw_file_name in raw_file_list:
         g = int(data_into_list[i+1])
         b = int(data_into_list[i+2])
         a = (r + g + b) 
+        if a == 0:
+            a = 40
         rgb[x][y][0] = float(r / a) * 255
         rgb[x][y][1] = float(g / a) * 255
         rgb[x][y][2] = float(b / a) * 255
@@ -57,5 +59,5 @@ for raw_file_name in raw_file_list:
     img_file_name = re.sub(r"pixel_file_(\d+)\.txt", r"frame_\1.jpg", raw_file_name)
     print(img_file_name)
     img = Image.fromarray(rgb)
-    img.show()
+    #img.show()
     img.save(img_file_name)

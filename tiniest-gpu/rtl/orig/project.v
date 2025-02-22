@@ -13,7 +13,9 @@ module tt_um_pongsagon_tiniest_gpu (
     output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
     input  wire       ena,      // always 1 when the design is powered, so you can ignore it
     input  wire       clk,      // clock
-    input  wire       rst_n    // reset_n - low to reset
+    input  wire       rst_n,    // reset_n - low to reset
+    inout             VDD,
+    inout             VSS
 );
 
 	wire reset = !rst_n;
@@ -442,7 +444,46 @@ module tt_um_pongsagon_tiniest_gpu (
 
 		clk <= (counter<DIVISOR/2)?1'b1:1'b0;
 	end*/
+        
+    wire [7:0] sram_data_in;
+    wire [7:0] sram_data_out;
+    wire [10:0] sram_addr;
+    wire sram_sel;
 
+    wire phi, phib, scan_i0o1, load, scan_in;
+
+    assign phi = uio_in[0];
+    assign phib = uio_in[1];
+    assign scan_i0o1 = uio_in[2];
+    assign load = uio_in[3];
+    assign scan_in = uio_in[4];
+
+    wire [10:0] scan_chain_addr;
+
+    scan_chain scan_chain_inst (
+        .din(sram_data_in),
+        .addr(scan_chain_addr),
+        .sram_sel(sram_sel),
+        .phi(phi),
+        .phib(phib),
+        .scan_i0o1(scan_i0o1),
+        .load(load),
+        .scan_in(scan_in),
+        .VDD(VDD),
+        .VSS(VSS)
+    );
+
+    assign sram_addr = (load) ? scan_chain_addr : 'd0;
+    
+    sram_wrapper sram_wrapper_inst (
+        .clk(clk),
+        .sram_sel(sram_sel),
+        .cen(1'b0),
+        .wen(~load),
+        .addr(sram_addr),
+        .din(sram_data_in),
+        .dout(sram_data_out)
+    );
 
 endmodule
 

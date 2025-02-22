@@ -10,6 +10,7 @@
 #include <cerrno>
 #include <string.h>
 #include <fstream>
+#include <filesystem>
 
 #include "fix.h"
 
@@ -57,7 +58,7 @@ char get_input(int id) {
 }
 
 void process_output(char vga) {
-    pixel_file << (int)vga << " ";
+    pixel_file << (int)vga << endl;
     output_count++;
     //if (vga != 1) printf("C received %d\n", (uint8_t)vga);
 }
@@ -285,7 +286,7 @@ void init3D() {
     light_dir = { int2fix14(0), int2fix14(0), int2fix14(1) };
     cam_yaw = 90;
     cam_pitch = 0;
-    cam_zoom = int2fix(15);
+    cam_zoom = int2fix(8);
     eye = { int2fix(0),int2fix(0),cam_zoom };
     center = { float2fix(0.0),float2fix(0),int2fix(0) };
     up = { fix_0,fix_1,fix_0 };
@@ -348,6 +349,32 @@ void printBits(size_t const size, void const* const ptr)
     printf("\n");
 }
 
+char texture_arr[2048];
+
+void load_texture(const char* filename)
+{
+    fstream texture_file;
+    texture_file.open(filename); 
+
+    printf("Texture opened\n");
+    
+    texture_file >> hex;
+    unsigned int pixel;
+    int i = 0;
+
+    while (!texture_file.eof()) {
+        texture_file >> pixel;
+        texture_arr[i++] = (char)pixel;
+    }
+
+    printf("Total texture bytes %d\n", i - 1);
+}
+
+char get_texture(int id)
+{
+    return texture_arr[id];
+}
+
 float world;
 float world_offset;
 char render_mode;
@@ -361,6 +388,8 @@ int c_init()
 
     pixel_file_name = "pixel_file_" + to_string(command_index) + ".txt";
     pixel_file.open(pixel_file_name.c_str());
+
+    load_texture("/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/texture/ddct.bin");
 
     fstream command_file;
     command_file.open("input_command.txt");
@@ -385,6 +414,8 @@ int c_init()
     color2_mode = 0;
 
     init3D();
+
+    printf("c_init done\n");
 
     return 0;
 }

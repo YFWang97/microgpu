@@ -1,7 +1,9 @@
+`timescale 1ns/1ps
 module tb_top();
 
 	import "DPI-C" function byte get_input(input int id);
 	import "DPI-C" function void process_output(input byte vga);
+	import "DPI-C" function byte get_texture(input int id);
 	import "DPI-C" function int c_init();
 	import "DPI-C" function int c_update();
     import "DPI-C" function int c_get_command();
@@ -11,39 +13,91 @@ module tb_top();
 	reg ena;
 	reg [7:0] ui_in;
 	reg [7:0] uio_out;
+    reg [7:0] uio_in;
 	
 	reg [7:0] vga;
+
+    supply1 VDD;
+    supply0 VSS;
 	
 	parameter BIT_TIME = 8680;
 	parameter CLK_PERIOD = 10;
 
 	parameter UART_DLY_CYCLE = 27;
 
+    reg clk_running;
+
+    initial begin
+        clk = 1;
+        clk_running = 0;
+        forever begin
+            if (clk_running) begin
+                #(CLK_PERIOD/2); clk = ~clk;
+                #(CLK_PERIOD/2); clk = ~clk;
+            end
+            else begin
+                #0;
+            end
+        end
+    end
+
 	task progress_clk(integer cycles);
 		integer i;
+        clk_running = 1;
 		for (i = 0; i < cycles; i = i + 1) begin
-			#(CLK_PERIOD/2); clk = ~clk;
-			#(CLK_PERIOD/2); clk = ~clk;
+            @(posedge clk);
 		end
+        clk_running = 0;
 	endtask
 
-	task progress_clk_till_vsync_low();
-		forever begin
-			if (uio_out[3] == 0) break;
-            else begin
-                #(CLK_PERIOD/2); clk = ~clk;
-                #(CLK_PERIOD/2); clk = ~clk;
-            end
-		end
-	endtask
+    task stop_clk();
+        clk_running = 0;
+    endtask
 
-    task progress_clk_till_next_uart_sample();
-        forever begin
-            if (tb_top.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick == 1) break;
-            else begin
-                #(CLK_PERIOD/2); clk = ~clk;
-                #(CLK_PERIOD/2); clk = ~clk;
+    task start_clk();
+        clk_running = 1;
+    endtask
+
+    initial begin
+        uio_in[0] = 0;
+        uio_in[1] = 0;
+        uio_in[2] = 0;
+    end
+
+    task progress_phi();
+        uio_in[0] = 1;
+        #(CLK_PERIOD/2);
+        uio_in[0] = 0;
+        uio_in[1] = 1;        
+        #(CLK_PERIOD/2);
+        uio_in[0] = 0;
+        uio_in[1] = 0;        
+    endtask
+
+
+    task load_texture_from_scan_chain();
+        integer texture_byte_index;
+        integer bit_index;
+        byte texture_byte;
+        for (texture_byte_index = 0; texture_byte_index < 2048; texture_byte_index = texture_byte_index + 1) begin
+            texture_byte = get_texture(texture_byte_index);
+
+            uio_in[4] <= 1;
+            progress_phi();
+
+			for (bit_index = 10; bit_index >= 0; bit_index = bit_index - 1) begin
+                uio_in[4] <= texture_byte_index[bit_index];
+                progress_phi();
             end
+
+			for (bit_index = 7; bit_index >= 0; bit_index = bit_index - 1) begin
+                uio_in[4] <= texture_byte[bit_index];
+                progress_phi();
+            end               
+
+            uio_in[3] <= 1;
+            @(posedge clk);
+            uio_in[3] <= 0;
         end
     endtask
 
@@ -68,7 +122,10 @@ module tb_top();
 			progress_clk(16 * UART_DLY_CYCLE);
 		end
 		ui_in[3] <= 1;
-		progress_clk_till_vsync_low();
+        start_clk();
+        @(negedge uio_out[3]);
+        stop_clk();
+        progress_clk(1);
 		progress_clk(55999);
     endtask
 
@@ -95,7 +152,6 @@ module tb_top();
 	integer ret;
 
 	initial begin
-		clk <= 1;
 		rst_n <= 0;
 		ena <= 0;
 		ui_in[3] <= 0;
@@ -110,14 +166,24 @@ module tb_top();
 		@(posedge rst_n);
 		ret = c_init();
 		//progress_clk(10);
+
+        start_clk();
+
+        load_texture_from_scan_chain();
+
+        stop_clk();
         
-        for (loop_index = 0; loop_index < 12; loop_index = loop_index + 1) begin
+        for (loop_index = 0; loop_index < 2; loop_index = loop_index + 1) begin
             ret = c_update();
             configure();
             run_one_frame();
-            progress_clk_till_next_uart_sample();
+            start_clk();
+            @(posedge tb_top.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick);
+            stop_clk();
+            progress_clk(1);
             ret = c_get_command();
         end
+        $stop();
 	end
 
 	tt_um_pongsagon_tiniest_gpu gpu (
@@ -125,7 +191,10 @@ module tb_top();
 		.rst_n(rst_n),
 		.ena(ena),
 		.ui_in(ui_in),
-		.uio_out(uio_out)
+		.uio_out(uio_out),
+        .uio_in(uio_in),
+        .VDD(VDD),
+        .VSS(VSS)
 	);
 
 endmodule

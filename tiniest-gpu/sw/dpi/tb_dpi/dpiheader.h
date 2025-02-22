@@ -41,6 +41,11 @@ get_input(
     int id);
 
 DPI_LINK_DECL DPI_DLLESPEC
+char
+get_texture(
+    int id);
+
+DPI_LINK_DECL DPI_DLLESPEC
 void
 process_output(
     char vga);
