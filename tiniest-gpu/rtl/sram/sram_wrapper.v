@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-`define DELAY #0
+`define DELAY #5
 
 module sram_wrapper # (
     parameter DW = 8, //bit
@@ -14,11 +14,13 @@ module sram_wrapper # (
 );
 
     wire cen_delayed;
+    wire wen_delayed;
     wire [AW-1:0] addr_delayed;
     wire [DW-1:0] din_delayed;
-
+	
     assign `DELAY cen_delayed = cen;
-
+    assign `DELAY wen_delayed = wen;
+  
     assign `DELAY addr_delayed = addr;
     assign `DELAY din_delayed = din;
 
@@ -29,7 +31,7 @@ module sram_wrapper # (
     sram_gpu sram00_inst1 (
         .CLK(clk),
         .CEN(cen_delayed),
-        .WEN(wen || sram_sel),
+        .WEN(wen_delayed || sram_sel),
         .A(addr_delayed),
         //.D({24'b0, din_delayed}),
 	.D(din_delayed),
@@ -41,7 +43,7 @@ module sram_wrapper # (
     sram_gpu sram00_inst2 (
         .CLK(clk),
         .CEN(cen_delayed),
-        .WEN(wen || (~sram_sel)),
+        .WEN(wen_delayed || (~sram_sel)),
         .A(addr_delayed),
         //.D({24'b0, din_delayed}),
 	.D(din_delayed),

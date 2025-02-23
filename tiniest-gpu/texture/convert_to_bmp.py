@@ -23,5 +23,5 @@ for x in a:
 for i in range(0, len(bit_list), 8):
     byte_str = ''.join(str(bit) for bit in list(reversed(bit_list[i:i+8])))
     byte_val = int(byte_str, 2)
-    f.write(hex(byte_val))
+    f.write(format(byte_val, 'x'))
     f.write("\n")

@@ -21,7 +21,7 @@ module tb_top();
     supply0 VSS;
 	
 	parameter BIT_TIME = 8680;
-	parameter CLK_PERIOD = 10;
+	parameter CLK_PERIOD = 20;
 
 	parameter UART_DLY_CYCLE = 27;
 
@@ -82,7 +82,7 @@ module tb_top();
         for (texture_byte_index = 0; texture_byte_index < 2048; texture_byte_index = texture_byte_index + 1) begin
             texture_byte = get_texture(texture_byte_index);
 
-            uio_in[4] <= 1;
+            uio_in[4] <= 0;
             progress_phi();
 
 			for (bit_index = 10; bit_index >= 0; bit_index = bit_index - 1) begin
@@ -154,7 +154,7 @@ module tb_top();
 	initial begin
 		rst_n <= 0;
 		ena <= 0;
-		ui_in[3] <= 0;
+		ui_in[3] <= 1;
 		progress_clk(3);
 		rst_n <= 1;
 		ena <= 1;
@@ -168,10 +168,10 @@ module tb_top();
 		//progress_clk(10);
 
         start_clk();
-
         load_texture_from_scan_chain();
-
+        @(posedge tb_top.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick);
         stop_clk();
+        progress_clk(1);
         
         for (loop_index = 0; loop_index < 2; loop_index = loop_index + 1) begin
             ret = c_update();
