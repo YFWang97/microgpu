@@ -386,7 +386,7 @@ int main (void) {
 
     int vertex_index = 0;
 
-    if (!vertices_file.is_open()) {
+    if (!vertices_file) {
         printf("Error: Unable to find model vertex file\n");
         return -1;
     }
@@ -415,7 +415,7 @@ int main (void) {
     //054
     ifstream index_file("./model/index.txt");
 
-    if (!index_file.is_open()) {
+    if (!index_file) {
         printf("Error: Unable to find model index file\n");
         return -1;
     }

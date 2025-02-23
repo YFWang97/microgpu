@@ -356,6 +356,10 @@ void load_texture(const char* filename)
     fstream texture_file;
     texture_file.open(filename); 
 
+    if (!texture_file) {
+        printf("Unable to find the texture file %s\n", filename);
+    }
+
     printf("Texture opened\n");
     
     texture_file >> hex;
@@ -392,7 +396,11 @@ int c_init()
     load_texture("/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/texture/ddct.bin");
 
     fstream command_file;
-    command_file.open("input_command.txt");
+    command_file.open("input_command1.txt");
+
+    if (!command_file) {
+        printf("Unable to find the command file input_command.txt\n");
+    }
 
     command_list = (int*) malloc(100 * sizeof(int));
 
