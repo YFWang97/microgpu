@@ -173,7 +173,7 @@ module tb_top();
         stop_clk();
         progress_clk(1);
         
-        for (loop_index = 0; loop_index < 2; loop_index = loop_index + 1) begin
+        for (loop_index = 0; loop_index < 10; loop_index = loop_index + 1) begin
             ret = c_update();
             configure();
             run_one_frame();

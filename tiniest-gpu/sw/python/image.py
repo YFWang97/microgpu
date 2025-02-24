@@ -56,7 +56,7 @@ for raw_file_name in raw_file_list:
                 file.write('\n')
 
     # show the image and save to file
-    img_file_name = re.sub(r"pixel_file_(\d+)\.txt", r"frame_\1.jpg", raw_file_name)
+    img_file_name = re.sub(r"pixel_file_(\d+)\.txt", r"frame_\1.bmp", raw_file_name)
     print(img_file_name)
     img = Image.fromarray(rgb)
     #img.show()

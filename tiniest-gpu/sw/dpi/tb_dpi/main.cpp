@@ -396,7 +396,7 @@ int c_init()
     load_texture("/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/texture/ddct.bin");
 
     fstream command_file;
-    command_file.open("input_command1.txt");
+    command_file.open("input_command.txt");
 
     if (!command_file) {
         printf("Unable to find the command file input_command.txt\n");

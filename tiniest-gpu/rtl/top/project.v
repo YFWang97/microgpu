@@ -336,6 +336,7 @@ module tt_um_pongsagon_tiniest_gpu (
 	wire [10:0] addr_read;
 	wire [6:0] u_addr;
 	wire [6:0] v_addr;  
+    reg [6:0] u_addr_reg;
 	vs vs1(.clk(clk),.reset(reset),.x(x),.y(y),.pc_data_ready(pc_data_ready),
 					.x_world_v0(x_world_v0),.y_world_v0(y_world_v0),.z_world_v0(z_world_v0),
 					.x_world_v1(x_world_v1),.y_world_v1(y_world_v1),.z_world_v1(z_world_v1),
@@ -489,11 +490,16 @@ module tt_um_pongsagon_tiniest_gpu (
     );
 
 //option2
+
+    always @(posedge clk) begin
+        u_addr_reg <= u_addr;
+    end    
+
 	assign addr_read = {v_addr[6:0], u_addr[6:3]}; //for read
 	assign sram_data_out_0 = sram_data_out[7:0];
 	assign sram_data_out_1 = sram_data_out[15:7];
-	assign pixel_0 = sram_data_out_0[u_addr&7] & (~load); //pixel 1 bit
-	assign pixel_1 = sram_data_out_1[u_addr&7] & (~load); //pixel 1 bit
+	assign pixel_0 = sram_data_out_0[u_addr_reg&7] & (~load); //pixel 1 bit
+	assign pixel_1 = sram_data_out_1[u_addr_reg&7] & (~load); //pixel 1 bit
 
 //option1
     assign sram_addr = (load) ? scan_chain_addr : addr_read;
