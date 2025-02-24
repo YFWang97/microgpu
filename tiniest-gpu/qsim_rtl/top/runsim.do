@@ -9,12 +9,12 @@ vlog +acc -incr ../../rtl/lib/*.v
 vsim +acc -t ps -lib work -c tb_top
 
 add wave -noupdate /tb_top/*
-add wave -noupdate /tb_top/gpu/*
-#add wave -noupdate -r /tb_top/gpu/ia1/*
-#add wave -noupdate /tb_top/gpu/scan_chain_inst/*
-add wave -noupdate /tb_top/gpu/sram_wrapper_inst/*
-add wave -noupdate /tb_top/gpu/raster1/*
-add wave -noupdate /tb_top/gpu/v/*
-add wave -noupdate /tb_top/gpu/raster1/tex0/*
+add wave -noupdate /tb_top/top_inst/gpu/*
+#add wave -noupdate -r /tb_top/top_inst/gpu/ia1/*
+#add wave -noupdate /tb_top/top_inst/scan_chain_inst/*
+add wave -noupdate /tb_top/top_inst/sram_wrapper_inst/*
+add wave -noupdate /tb_top/top_inst/gpu/raster1/*
+add wave -noupdate /tb_top/top_inst/gpu/v/*
+add wave -noupdate /tb_top/top_inst/gpu/raster1/tex0/*
 
 run -all

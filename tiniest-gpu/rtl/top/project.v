@@ -13,6 +13,8 @@ module tt_um_pongsagon_tiniest_gpu (
     input  wire       ena,      // always 1 when the design is powered, so you can ignore it
     input  wire       clk,      // clock
     input  wire       rst_n,    // reset_n - low to reset
+    output      [10:0] addr_read,
+    input       [15:0] sram_data_out,
     inout             VDD,
     inout             VSS
 );
@@ -333,7 +335,6 @@ module tt_um_pongsagon_tiniest_gpu (
 	wire [9:0] x, y;
 
 	wire pixel_0, pixel_1;
-	wire [10:0] addr_read;
 	wire [6:0] u_addr;
 	wire [6:0] v_addr;  
     reg [6:0] u_addr_reg;
@@ -384,6 +385,19 @@ module tt_um_pongsagon_tiniest_gpu (
 	assign uio_oe[7:0] = 8'b1111_1111;
 	assign uo_out[7:0] = 0;
 
+    //option2
+    //Ratser access SRAM
+    always @(posedge clk) begin
+        u_addr_reg <= u_addr;
+    end    
+
+	wire [7:0] sram_data_out_1, sram_data_out_0;
+
+	assign addr_read = {v_addr[6:0], u_addr[6:3]}; //for read
+	assign sram_data_out_0 = sram_data_out[7:0];
+	assign sram_data_out_1 = sram_data_out[15:7];
+	assign pixel_0 = sram_data_out_0[u_addr_reg&7]; //pixel 1 bit
+	assign pixel_1 = sram_data_out_1[u_addr_reg&7]; //pixel 1 bit
 
 
 	//////////////////////////////
@@ -449,71 +463,6 @@ module tt_um_pongsagon_tiniest_gpu (
 		clk <= (counter<DIVISOR/2)?1'b1:1'b0;
 	end*/
         
-    wire [7:0] sram_data_in;
-    wire [15:0] sram_data_out;
-	wire [7:0] sram_data_out_1, sram_data_out_0;
-    wire [10:0] sram_addr;
-    wire sram_sel;
-
-    wire phi, phib, scan_i0o1, load, scan_in;
-
-	reg load_reg;
-
-    assign phi = uio_in[0];
-    assign phib = uio_in[1];
-    assign scan_i0o1 = uio_in[2];
-    assign load = uio_in[3];
-    assign scan_in = uio_in[4];
-
-    wire [10:0] scan_chain_addr;
-
-//	always @(posedge clk) begin
-//`ifdef RTL_SIM
-//		#5;
-//`endif
-//		sram_data_in_reg <= sram_data_in;
-//		sram_addr_reg <= sram_addr;
-//		load_reg <= load;
-//	end
-
-    scan_chain scan_chain_inst (
-        .din(sram_data_in),
-        .addr(scan_chain_addr),
-        .sram_sel(sram_sel),
-        .phi(phi),
-        .phib(phib),
-        .scan_i0o1(scan_i0o1),
-        .load(load),
-        .scan_in(scan_in),
-        .VDD(VDD),
-        .VSS(VSS)
-    );
-
-//option2
-
-    always @(posedge clk) begin
-        u_addr_reg <= u_addr;
-    end    
-
-	assign addr_read = {v_addr[6:0], u_addr[6:3]}; //for read
-	assign sram_data_out_0 = sram_data_out[7:0];
-	assign sram_data_out_1 = sram_data_out[15:7];
-	assign pixel_0 = sram_data_out_0[u_addr_reg&7] & (~load); //pixel 1 bit
-	assign pixel_1 = sram_data_out_1[u_addr_reg&7] & (~load); //pixel 1 bit
-
-//option1
-    assign sram_addr = (load) ? scan_chain_addr : addr_read;
-
-    sram_wrapper sram_wrapper_inst (
-        .clk(clk),
-        .sram_sel(sram_sel),
-        .cen(1'b0),
-        .wen(~load),
-        .addr(sram_addr),
-	//.addr_read(addr_read),
-        .din(sram_data_in),
-        .dout(sram_data_out)
-    );
 
 endmodule
 

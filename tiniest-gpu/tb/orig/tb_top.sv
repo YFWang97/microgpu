@@ -169,7 +169,7 @@ module tb_top();
 
         start_clk();
         load_texture_from_scan_chain();
-        @(posedge tb_top.top_inst.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick);
+        @(posedge tb_top.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick);
         stop_clk();
         progress_clk(1);
         
@@ -178,7 +178,7 @@ module tb_top();
             configure();
             run_one_frame();
             start_clk();
-            @(posedge tb_top.top_inst.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick);
+            @(posedge tb_top.gpu.ia1.UART_UNIT.UART_RX_UNIT.sample_tick);
             stop_clk();
             progress_clk(1);
             ret = c_get_command();
@@ -186,7 +186,7 @@ module tb_top();
         $stop();
 	end
 
-	top top_inst (
+	tt_um_pongsagon_tiniest_gpu gpu (
 		.clk(clk),
 		.rst_n(rst_n),
 		.ena(ena),
