@@ -458,14 +458,18 @@ int main (void) {
         vertex_vec3 = mat_rotation_y_object.dot(vertex_vec3);
         vertex_vec3 = mat_rotation_z_object.dot(vertex_vec3);
 
-        vertex_vec4_buffer[i] = mat_translation_world.dot(Vec4(vertex_vec3));
+        vertex_vec3.print("1");
 
+        vertex_vec4_buffer[i] = mat_translation_world.dot(Vec4(vertex_vec3));
+        vertex_vec4_buffer[i].print("2");
         vertex_vec4_buffer[i] = mat_translation_view.dot(vertex_vec4_buffer[i]);
+        vertex_vec4_buffer[i].print("3");
 
         //temp = "after_view_translation " + to_string(i);
         //vertex_vec4_buffer[i].print(temp.c_str());
 
         vertex_vec4_buffer[i] = mat_rotation_view.dot(vertex_vec4_buffer[i]);
+        vertex_vec4_buffer[i].print("4");
 
         //temp = "after_view_rotation " + to_string(i);
         //vertex_vec4_buffer[i].print(temp.c_str());
@@ -475,18 +479,22 @@ int main (void) {
         vertex_world_buffer[i].vec[2] = vertex_vec4_buffer[i].vec[2]; 
 
         vertex_vec4_buffer[i] = mat_persp.dot(vertex_vec4_buffer[i]);
+        vertex_vec4_buffer[i].print("5");
 
         //temp = "after_perspective " + to_string(i);
         //vertex_vec4_buffer[i].print(temp.c_str());
 
         vertex_vec4_buffer[i].normalize_to_z();
+        vertex_vec4_buffer[i].print("6");
 
         vertex_vec4_buffer[i] = mat_viewpoint.dot(vertex_vec4_buffer[i]);
+        vertex_vec4_buffer[i].print("7");
 
         //temp = "after_viewpoint " + to_string(i);
         //vertex_vec4_buffer[i].print(temp.c_str());
 
         Vec2 result(vertex_vec4_buffer[i]);
+        result.print("8");
 
         result_vertex_buffer[i] = result;
     }     

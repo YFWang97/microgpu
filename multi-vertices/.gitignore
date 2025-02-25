@@ -1,0 +1,6 @@
+*.wlf
+rtl/lib/*
+*.swp
+transcript
+*.bmp
+work/
