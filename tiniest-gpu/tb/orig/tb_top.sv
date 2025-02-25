@@ -137,6 +137,7 @@ module tb_top();
 		for (y = 0; y < 525; y = y + 1) begin
 			for (x = 0; x < 800; x = x + 1) begin
 				if (x < 640 && y < 480) begin
+                    #1;
 					process_output({{6'd0}, uio_out[0], uio_out[4]});
 					process_output({{6'd0}, uio_out[2], uio_out[6]});
 					process_output({{6'd0}, uio_out[1], uio_out[5]});

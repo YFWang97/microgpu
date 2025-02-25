@@ -1,7 +1,7 @@
 vlib work
 vmap work work
 
-vlog +acc -incr -dpiheader ../../sw/dpi/tb_dpi/dpiheader.h ../../sw/dpi/tb_dpi/main.cpp ../../tb/top/tb_top.sv
+vlog +acc -incr -dpiheader ../../sw/dpi/tb_dpi/dpiheader.h ../../sw/dpi/tb_dpi/main.cpp ../../tb/orig/tb_top.sv
 vlog +acc -incr +define+RTL_SIM ../../rtl/orig/*.v
 vlog +acc -incr ../../rtl/scan_chain/*.v
 vlog +acc -incr ../../rtl/sram/*.v

@@ -125,8 +125,7 @@ module tb_top();
         start_clk();
         @(negedge uio_out[3]);
         stop_clk();
-        progress_clk(1);
-		progress_clk(55999);
+		progress_clk(56000);
     endtask
 
     task run_one_frame();
@@ -134,13 +133,16 @@ module tb_top();
 	    integer x, y;
 
         index = 0;
+		progress_clk(2);
 		for (y = 0; y < 525; y = y + 1) begin
 			for (x = 0; x < 800; x = x + 1) begin
 				if (x < 640 && y < 480) begin
 					process_output({{6'd0}, uio_out[0], uio_out[4]});
 					process_output({{6'd0}, uio_out[2], uio_out[6]});
 					process_output({{6'd0}, uio_out[1], uio_out[5]});
-					//$display("SV sent id: %d, value %d %d %d", index, {uio_out[0], uio_out[4]}, {uio_out[2], uio_out[6]}, {uio_out[1], uio_out[5]});
+                    if (x == 0 && y == 0) begin
+                    $display("SV sent id: %d, x: %d, y: %d, value %d %d %d %0t", index, x, y, {uio_out[0], uio_out[4]}, {uio_out[2], uio_out[6]}, {uio_out[1], uio_out[5]}, $realtime);
+                    end
 					index = index + 1;
 				end
 				progress_clk(2);

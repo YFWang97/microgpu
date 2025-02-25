@@ -1,0 +1,341 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/yangfan/Desktop/Columbia/2025Spring/Projects/microgpu/tiniest-gpu/rtl/top
+vbaud_rate_generator
+Z1 !s110 1740367349
+!i10b 1
+!s100 8d4JRAKWE6`RHbCC9CKR?1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I[2c:_N9G]l^HjOh_]3?hL2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1740360050
+8baud_rate_generator.v
+Fbaud_rate_generator.v
+!i122 2
+L0 35 29
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1740367349.000000
+!s107 vs.v|vga.v|uart_top.v|uart_receiver.v|top.v|slowmpy.v|raster.v|project.v|ia.v|dot4.v|div.v|bitmap_rom_tt.v|bitmap_rom_sk.v|bitmap_rom_ddct.v|baud_rate_generator.v|
+Z7 !s90 baud_rate_generator.v|bitmap_rom_ddct.v|bitmap_rom_sk.v|bitmap_rom_tt.v|div.v|dot4.v|ia.v|project.v|raster.v|slowmpy.v|top.v|uart_receiver.v|uart_top.v|vga.v|vs.v|
+!i113 1
+Z8 tCvgOpt 0
+vbitmap_rom_ddct
+R1
+!i10b 1
+!s100 HE4gZAi6njm1JZ?T0J[9f1
+R2
+IGbO<cgNSIP4G2B6H>TC9Y0
+R3
+R0
+R4
+8bitmap_rom_ddct.v
+Fbitmap_rom_ddct.v
+!i122 2
+L0 2 2064
+R5
+r1
+!s85 0
+31
+R6
+Z9 !s107 vs.v|vga.v|uart_top.v|uart_receiver.v|top.v|slowmpy.v|raster.v|project.v|ia.v|dot4.v|div.v|bitmap_rom_tt.v|bitmap_rom_sk.v|bitmap_rom_ddct.v|baud_rate_generator.v|
+R7
+!i113 1
+R8
+vbitmap_rom_sk
+R1
+!i10b 1
+!s100 fFPb?2M8e<JFgN6jn=W@G2
+R2
+Io^h>CPT@gC3NbzNl4^^<L3
+R3
+R0
+R4
+8bitmap_rom_sk.v
+Fbitmap_rom_sk.v
+!i122 2
+Z10 L0 2 2062
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vbitmap_rom_tt
+R1
+!i10b 1
+!s100 HXJ4UQ1Ve`N?Lg31hWTn^2
+R2
+I[`<C@F53c3zNPY2Ug=iie2
+R3
+R0
+R4
+8bitmap_rom_tt.v
+Fbitmap_rom_tt.v
+!i122 2
+R10
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vdiv
+R1
+!i10b 1
+!s100 NfDTFzj8]1j2ILfE;L3C;2
+R2
+I4iF]:cZ[ST:HA082nUoag3
+R3
+R0
+R4
+8div.v
+Fdiv.v
+!i122 2
+L0 6 129
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vdot4
+R1
+!i10b 1
+!s100 f9@eHUACTT0n9bD>XGPMO0
+R2
+IMM[m?TV>o5J5zT0A[J1Cn3
+R3
+R0
+R4
+8dot4.v
+Fdot4.v
+!i122 2
+L0 14 104
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+via
+R1
+!i10b 1
+!s100 `S6;>Vd[Q^=Ko:;W:=_lT3
+R2
+IJA?k4W?l4_UU?DA0C3QVN1
+R3
+R0
+R4
+8ia.v
+Fia.v
+!i122 2
+L0 6 65
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vraster
+R1
+!i10b 1
+!s100 4Q9^USC1KTXIWBJ^DmVaW1
+R2
+IjKbi_@kJXJ9hHI8PVKOXE0
+R3
+R0
+w1740364511
+8raster.v
+Fraster.v
+!i122 2
+L0 13 332
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vslowmpy
+R1
+!i10b 1
+!s100 N>GTk[SWkN7m`2[^1WRY]0
+R2
+IOH4LTdNb>gGX^Co14kag^1
+R3
+R0
+R4
+8slowmpy.v
+Fslowmpy.v
+!i122 2
+L0 52 104
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vtop
+R1
+!i10b 1
+!s100 3YVUz4iA7oRJ;2ohFD8DL1
+R2
+IM^2O4ge9VZ@B2Z4oHViT90
+R3
+R0
+w1740367348
+8top.v
+Ftop.v
+!i122 2
+L0 1 65
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vtt_um_pongsagon_tiniest_gpu
+R1
+!i10b 1
+!s100 a<km[07nQJGoj7dE7WYaP1
+R2
+I<hTbQ9_<L<Y5Xh7BfQ:[E1
+R3
+R0
+w1740367287
+8project.v
+Fproject.v
+!i122 2
+L0 7 462
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vuart_receiver
+R1
+!i10b 1
+!s100 eK2Z5`7af4;0^NC6WWjZ_2
+R2
+I^C2K<W6d>Wn`9RSlgN=7z3
+R3
+R0
+R4
+8uart_receiver.v
+Fuart_receiver.v
+!i122 2
+L0 22 93
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vuart_top
+R1
+!i10b 1
+!s100 ]BV76d@>jYSk32YfbAVI:1
+R2
+I1@L1i9h?36VLh5IXZ@Zm<3
+R3
+R0
+R4
+8uart_top.v
+Fuart_top.v
+!i122 2
+L0 19 42
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vvga
+R1
+!i10b 1
+!s100 =biO2NYIKeAeRecPFWBV`0
+R2
+IJHQR5<V^4]Z1z8[haT]gF2
+R3
+R0
+R4
+8vga.v
+Fvga.v
+!i122 2
+L0 5 54
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vvs
+R1
+!i10b 1
+!s100 Ra@8J87Oi92LFVFSX;LCP2
+R2
+IoO[NJWiI[?]8]BNUb_jKf1
+R3
+R0
+R4
+8vs.v
+Fvs.v
+!i122 2
+L0 13 1317
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8

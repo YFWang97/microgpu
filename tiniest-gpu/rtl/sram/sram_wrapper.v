@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-`define DELAY #5
+`define DELAY #1
 
 module sram_wrapper # (
     parameter DW = 8, //bit
