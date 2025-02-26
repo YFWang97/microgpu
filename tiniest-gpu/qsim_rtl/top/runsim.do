@@ -13,6 +13,7 @@ add wave -noupdate /tb_top/top_inst/gpu/*
 #add wave -noupdate -r /tb_top/top_inst/gpu/ia1/*
 #add wave -noupdate /tb_top/top_inst/scan_chain_inst/*
 add wave -noupdate /tb_top/top_inst/sram_wrapper_inst/*
+add wave -noupdate /tb_top/top_inst/gpu/vs1/*
 add wave -noupdate /tb_top/top_inst/gpu/raster1/*
 add wave -noupdate /tb_top/top_inst/gpu/v/*
 add wave -noupdate /tb_top/top_inst/gpu/raster1/tex0/*
