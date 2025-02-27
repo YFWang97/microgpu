@@ -3,9 +3,13 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <cstring>
 
+#ifdef SDL
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_render.h>
+#define SDL_ERROR_MSG(...) cout << __VA_ARGS__ << "! " << "SDL_Error: " << SDL_GetError() << endl
+#endif
 
 using namespace std;
 
@@ -13,13 +17,13 @@ using namespace std;
 #define SCREEN_WIDTH 640.0
 #define SCREEN_HEIGHT 480.0
 
-#define SDL_ERROR_MSG(...) cout << __VA_ARGS__ << "! " << "SDL_Error: " << SDL_GetError() << endl
-
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
+#ifdef SDL
 SDL_Window* gWindow;
 SDL_Renderer* gRenderer;
+#endif
 
 class Vec {
     public:
@@ -128,6 +132,7 @@ class Vec2 : public Vec {
             vec[1] = ref.vec[1];
         }
 
+#ifdef SDL
         void render() {
             for (int i = -5; i < 5; i++) {
                 for (int j = -5; j < 5; j++) {
@@ -135,11 +140,17 @@ class Vec2 : public Vec {
                 } 
             }
         }
+#endif
 
         int cross(Vec2 rhs) {
             int ret;
             ret = vec[0] * rhs.vec[1] - vec[1] * rhs.vec[0];
             return ret;
+        }
+
+        void round() {
+            vec[0] = int(vec[0]);
+            vec[1] = int(vec[1]);
         }
 };
 
@@ -243,6 +254,7 @@ bool is_top_left(Vec2 edge) {
     return is_left_edge || is_top_edge;
 }
 
+#ifdef SDL
 int initialize_sdl() {
     if(SDL_Init(SDL_INIT_VIDEO) < 0) {
         SDL_ERROR_MSG("SDL: Failed to initialize");
@@ -273,6 +285,7 @@ int initialize_sdl() {
 
     return 0;
 }
+#endif
 
 
 int main (void) {
@@ -497,6 +510,7 @@ int main (void) {
         result.print("8");
 
         result_vertex_buffer[i] = result;
+        result_vertex_buffer[i].round();
     }     
 
     valid_buffer = (int*) malloc(12 * sizeof(int));
@@ -516,71 +530,87 @@ int main (void) {
 
     memset(frame_buffer, 0xFF, 640*480*3); 
 
-    for (int i = 0; i < 12; i++) {
-        if (valid_buffer[i] == 0) continue;
+    int w0[12];
+    int w1[12];
+    int w2[12];
 
-        Vec2 v0(result_vertex_buffer[index_buffer[3 * i]]);
-        Vec2 v1(result_vertex_buffer[index_buffer[3 * i + 1]]);
-        Vec2 v2(result_vertex_buffer[index_buffer[3 * i + 2]]);
+    int w0_row[12];
+    int w1_row[12];
+    int w2_row[12];
 
-        int x_min = floor(MIN(MIN(v0.vec[0], v1.vec[0]), v2.vec[0]));
-        int y_min = floor(MIN(MIN(v0.vec[1], v1.vec[1]), v2.vec[1]));
-        int x_max = ceil(MAX(MAX(v0.vec[0], v1.vec[0]), v2.vec[0]));
-        int y_max = ceil(MAX(MAX(v0.vec[1], v1.vec[1]), v2.vec[1]));        
+    int delta_w0_row[12];
+    int delta_w1_row[12];
+    int delta_w2_row[12];
 
-        Vec2 edge_w0, edge_w1, edge_w2;
+    int delta_w0_col[12];
+    int delta_w1_col[12];
+    int delta_w2_col[12];
 
-        edge_w0 = v2 - v1;
-        edge_w1 = v0 - v2;
-        edge_w2 = v1 - v0;
+    for (int row = 0; row < 480; row++) {
+        for (int col = 0; col < 640; col++) {
+            for (int i = 0; i < 12; i++) {
+                if (row == 0 && col == 0) {
+                    Vec2 v0(result_vertex_buffer[index_buffer[3 * i]]);
+                    Vec2 v1(result_vertex_buffer[index_buffer[3 * i + 1]]);
+                    Vec2 v2(result_vertex_buffer[index_buffer[3 * i + 2]]);
 
-        // Compute the constant delta_s that will be used for the horizontal and vertical steps
-        int delta_w0_col = -edge_w0.vec[1];
-        int delta_w1_col = -edge_w1.vec[1];
-        int delta_w2_col = -edge_w2.vec[1];
-        int delta_w0_row = edge_w0.vec[0];
-        int delta_w1_row = edge_w1.vec[0];
-        int delta_w2_row = edge_w2.vec[0];
+                    Vec2 edge_w0, edge_w1, edge_w2;
 
-        //// Rasterization fill rule, not 100% precise due to floating point innacuracy
-        //float bias0 = is_top_left(edge_w0) ? 0 : -0.0001;
-        //float bias1 = is_top_left(edge_w1) ? 0 : -0.0001;
-        //float bias2 = is_top_left(edge_w2) ? 0 : -0.0001;
+                    edge_w0 = v2 - v1;
+                    edge_w1 = v0 - v2;
+                    edge_w2 = v1 - v0;
 
-        // Compute the edge functions for the fist (top-left) point
-        Vec2 p0;
-        p0.vec[0] = x_min;
-        p0.vec[1] = y_min;
+                    // Compute the constant delta_s that will be used for the horizontal and vertical steps
+                    delta_w0_col[i] = -edge_w0.vec[1];
+                    delta_w1_col[i] = -edge_w1.vec[1];
+                    delta_w2_col[i] = -edge_w2.vec[1];
+                    delta_w0_row[i] = edge_w0.vec[0];
+                    delta_w1_row[i] = edge_w1.vec[0];
+                    delta_w2_row[i] = edge_w2.vec[0];
 
-        int w0_row = edge_w0.cross(p0-v1);
-        int w1_row = edge_w1.cross(p0-v2);
-        int w2_row = edge_w2.cross(p0-v0);
+                    //// Rasterization fill rule, not 100% precise due to floating point innacuracy
+                    //float bias0 = is_top_left(edge_w0) ? 0 : -0.0001;
+                    //float bias1 = is_top_left(edge_w1) ? 0 : -0.0001;
+                    //float bias2 = is_top_left(edge_w2) ? 0 : -0.0001;
 
-        for (int y = y_min; y <= y_max; y++) {
-            int w0 = w0_row;
-            int w1 = w1_row;
-            int w2 = w2_row;
+                    // Compute the edge functions for the fist (top-left) point
+                    Vec2 p0;
+                    p0.vec[0] = float(0);
+                    p0.vec[1] = float(0);
 
-            for (int x = x_min; x <= x_max; x++) {
-                bool is_inside = (w0 < 0 && w1 < 0 && w2 < 0);
-
-                if (is_inside) {
-                    frame_buffer[x + y * 640][0] = color_r[i];
-                    frame_buffer[x + y * 640][1] = color_g[i];
-                    frame_buffer[x + y * 640][2] = color_b[i];
+                    w0_row[i] = edge_w0.cross(p0-v1);
+                    w1_row[i] = edge_w1.cross(p0-v2);
+                    w2_row[i] = edge_w2.cross(p0-v0);
                 }
 
-                w0 += delta_w0_col;
-                w1 += delta_w1_col;
-                w2 += delta_w2_col;
-            }
+                if (col == 0) {
+                    w0[i] = w0_row[i];
+                    w1[i] = w1_row[i];
+                    w2[i] = w2_row[i];
+                } else {
+                    w0[i] += delta_w0_col[i];
+                    w1[i] += delta_w1_col[i];
+                    w2[i] += delta_w2_col[i];
+                }
 
-            w0_row += delta_w0_row;
-            w1_row += delta_w1_row;
-            w2_row += delta_w2_row;
+                if (col == 639) {
+                    w0_row[i] += delta_w0_row[i];
+                    w1_row[i] += delta_w1_row[i];
+                    w2_row[i] += delta_w2_row[i];
+                }
+
+                bool is_inside = (w0[i] < 0 && w1[i] < 0 && w2[i] < 0);
+
+                if (is_inside && valid_buffer[i]) {
+                    frame_buffer[col + row * 640][0] = color_r[i];
+                    frame_buffer[col + row * 640][1] = color_g[i];
+                    frame_buffer[col + row * 640][2] = color_b[i];
+                }
+            }
         }
     }
 
+#ifdef SDL
     initialize_sdl();
 
     SDL_Event event;
@@ -620,4 +650,5 @@ int main (void) {
 
         SDL_RenderPresent(gRenderer);
     }
+#endif
 }
