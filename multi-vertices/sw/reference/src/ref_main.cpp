@@ -70,6 +70,7 @@ class Vec {
                 printf("%f ", vec[i]);
             }
             printf("\n");
+            printf("\n");
         }
 };
 
@@ -191,6 +192,18 @@ class Mat4 {
             }
             printf("\n");
         }
+
+        Mat4 dot(Mat4 rhs) {
+            Mat4 ret;
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 4; j++) {
+                    for (int k = 0; k < 4; k++) {
+                        ret.mat[i][j] += mat[i][k] * rhs.mat[k][j];
+                    }
+                }
+            }
+            return ret;
+        }
 };
 
 class Mat3 {
@@ -290,9 +303,9 @@ int initialize_sdl() {
 
 int main (void) {
 
-    char color_r[8] = {0xF0, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00};
-    char color_g[8] = {0xF0, 0xFF, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00};
-    char color_b[8] = {0xF0, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};
+    unsigned char color_r[8] = {0xF0, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00};
+    unsigned char color_g[8] = {0xF0, 0xFF, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00};
+    unsigned char color_b[8] = {0xF0, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};
 
     const float fovy = 45.0;
     const float n = 1.0;
@@ -307,27 +320,30 @@ int main (void) {
     rot_y = 0;
     rot_z = 0;
 
-    Mat3 mat_rotation_x_object;
-    Mat3 mat_rotation_y_object;
-    Mat3 mat_rotation_z_object;
+    Mat4 mat_rotation_x_object;
+    Mat4 mat_rotation_y_object;
+    Mat4 mat_rotation_z_object;
 
     mat_rotation_z_object.mat[0][0] = cos(rot_z * PI / 180.0); 
     mat_rotation_z_object.mat[0][1] = -sin(rot_z * PI / 180.0); 
     mat_rotation_z_object.mat[1][0] = sin(rot_z * PI / 180.0); 
     mat_rotation_z_object.mat[1][1] = cos(rot_z * PI / 180.0); 
     mat_rotation_z_object.mat[2][2] = float(1);
+    mat_rotation_z_object.mat[3][3] = float(1);
 
     mat_rotation_y_object.mat[0][0] = cos(rot_y * PI / 180.0); 
     mat_rotation_y_object.mat[0][2] = sin(rot_y * PI / 180.0); 
     mat_rotation_y_object.mat[1][1] = float(1);
     mat_rotation_y_object.mat[2][0] = -sin(rot_y * PI / 180.0); 
     mat_rotation_y_object.mat[2][2] = cos(rot_y * PI / 180.0); 
+    mat_rotation_y_object.mat[3][3] = float(1);
 
     mat_rotation_x_object.mat[0][0] = float(1);
     mat_rotation_x_object.mat[1][1] = cos(rot_x * PI / 180.0); 
     mat_rotation_x_object.mat[1][2] = -sin(rot_x * PI / 180.0); 
     mat_rotation_x_object.mat[2][1] = sin(rot_x * PI / 180.0); 
     mat_rotation_x_object.mat[2][2] = cos(rot_x * PI / 180.0); 
+    mat_rotation_x_object.mat[3][3] = float(1);
 
     float l, r, b, t;
 
@@ -460,54 +476,41 @@ int main (void) {
     mat_viewpoint.mat[1][1] = -SCREEN_HEIGHT / 2.0;
     mat_viewpoint.mat[1][3] = (SCREEN_HEIGHT - 1.0) / 2.0;
 
+    Mat4 mat_view;
+    Mat4 mat_overall;
+
+    mat_overall = mat_rotation_view.dot(mat_translation_view);
+    mat_overall = mat_overall.dot(mat_translation_world);
+    mat_overall = mat_overall.dot(mat_rotation_z_object);
+    mat_overall = mat_overall.dot(mat_rotation_y_object);
+    mat_overall = mat_overall.dot(mat_rotation_x_object);
+
+    mat_view = mat_overall;
+    mat_overall = mat_persp.dot(mat_overall);
 
     result_vertex_buffer = new Vec2[8];
 
     string temp;
 
+    mat_overall.print("Overall");
+    mat_view.print("View");
+
     for (int i = 0; i < 8; i++) {
-        Vec3 vertex_vec3;
-        vertex_vec3 = mat_rotation_x_object.dot(vertex_buffer[i]);
-        vertex_vec3 = mat_rotation_y_object.dot(vertex_vec3);
-        vertex_vec3 = mat_rotation_z_object.dot(vertex_vec3);
+        Vec3 vertex_vec3 = vertex_buffer[i];
 
-        vertex_vec3.print("1");
-
-        vertex_vec4_buffer[i] = mat_translation_world.dot(Vec4(vertex_vec3));
-        vertex_vec4_buffer[i].print("2");
-        vertex_vec4_buffer[i] = mat_translation_view.dot(vertex_vec4_buffer[i]);
-        vertex_vec4_buffer[i].print("3");
-
-        //temp = "after_view_translation " + to_string(i);
-        //vertex_vec4_buffer[i].print(temp.c_str());
-
-        vertex_vec4_buffer[i] = mat_rotation_view.dot(vertex_vec4_buffer[i]);
-        vertex_vec4_buffer[i].print("4");
-
-        //temp = "after_view_rotation " + to_string(i);
-        //vertex_vec4_buffer[i].print(temp.c_str());
+        vertex_vec4_buffer[i] = mat_view.dot(Vec4(vertex_vec3));
 
         vertex_world_buffer[i].vec[0] = vertex_vec4_buffer[i].vec[0]; 
         vertex_world_buffer[i].vec[1] = vertex_vec4_buffer[i].vec[1]; 
         vertex_world_buffer[i].vec[2] = vertex_vec4_buffer[i].vec[2]; 
 
-        vertex_vec4_buffer[i] = mat_persp.dot(vertex_vec4_buffer[i]);
-        vertex_vec4_buffer[i].print("5");
-
-        //temp = "after_perspective " + to_string(i);
-        //vertex_vec4_buffer[i].print(temp.c_str());
+        vertex_vec4_buffer[i] = mat_overall.dot(Vec4(vertex_vec3));
 
         vertex_vec4_buffer[i].normalize_to_z();
-        vertex_vec4_buffer[i].print("6");
 
         vertex_vec4_buffer[i] = mat_viewpoint.dot(vertex_vec4_buffer[i]);
-        vertex_vec4_buffer[i].print("7");
-
-        //temp = "after_viewpoint " + to_string(i);
-        //vertex_vec4_buffer[i].print(temp.c_str());
 
         Vec2 result(vertex_vec4_buffer[i]);
-        result.print("8");
 
         result_vertex_buffer[i] = result;
         result_vertex_buffer[i].round();
@@ -526,7 +529,7 @@ int main (void) {
         printf("Debug: Tri %d is %d\n", i, valid_buffer[i]);
     }
 
-    char frame_buffer[640*480][3];
+    unsigned char frame_buffer[640*480][3];
 
     memset(frame_buffer, 0xFF, 640*480*3); 
 

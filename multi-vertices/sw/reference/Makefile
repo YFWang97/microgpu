@@ -2,7 +2,7 @@ SRC = $(wildcard src/*.cpp)
 
 CC = g++
 
-COMPILER_FLAGS = -w -Wall -O3 -pg -g
+COMPILER_FLAGS = -Wall -O3 -pg -g
 
 LINKER_FLAGS = -lSDL2
 INCLUDE = -Iinclude/
