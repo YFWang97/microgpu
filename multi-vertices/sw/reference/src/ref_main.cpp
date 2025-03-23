@@ -253,6 +253,10 @@ Vec2* result_vertex_buffer;
 
 int* index_buffer;
 int* valid_buffer;
+float* intensity_buffer;
+
+int num_triangles;
+int num_vertices;
 
 void assembler();
 
@@ -301,11 +305,19 @@ int initialize_sdl() {
 #endif
 
 
-int main (void) {
+int main (int argc, char** argv) {
 
-    unsigned char color_r[8] = {0xF0, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00};
-    unsigned char color_g[8] = {0xF0, 0xFF, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00};
-    unsigned char color_b[8] = {0xF0, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};
+	if (argc != 2) {
+		printf("./ref_main <cube/sphere>\n");
+		exit(1);
+	}
+
+    //unsigned char color_r[8] = {0xF0, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00};
+    //unsigned char color_g[8] = {0xF0, 0xFF, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00};
+    //unsigned char color_b[8] = {0xF0, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};
+    unsigned char color_r[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    unsigned char color_g[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    unsigned char color_b[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
     const float fovy = 45.0;
     const float n = 1.0;
@@ -316,9 +328,21 @@ int main (void) {
 
     float rot_x, rot_y, rot_z;
 
-    rot_x = 0;
+	rot_x = 20;
     rot_y = 0;
     rot_z = 0;
+
+	float tran_x, tran_y, tran_z;
+
+	tran_x = 0;
+	tran_y = 0;
+	tran_z = -3;
+
+	float light_x, light_y, light_z;
+
+	light_x = 0;
+	light_y = -1;
+	light_z = -1;
 
     Mat4 mat_rotation_x_object;
     Mat4 mat_rotation_y_object;
@@ -368,14 +392,22 @@ int main (void) {
     Vec3 camera_coord;
     Vec3 camera_g;
     Vec3 camera_t;
-
-    camera_coord.vec[0] = 5;
-    camera_coord.vec[1] = 2;
+    
+    camera_coord.vec[0] = 0;
+    camera_coord.vec[1] = 0;
     camera_coord.vec[2] = 0;
 
-    camera_g.vec[0] = -4;
+    camera_g.vec[0] = 0;
     camera_g.vec[1] = 0;
-    camera_g.vec[2] = -9;
+    camera_g.vec[2] = -1;
+
+    //camera_coord.vec[0] = 5;
+    //camera_coord.vec[1] = 2;
+    //camera_coord.vec[2] = 0;
+
+    //camera_g.vec[0] = -4;
+    //camera_g.vec[1] = 0;
+    //camera_g.vec[2] = -9;
 
     camera_t.vec[0] = 0;
     camera_t.vec[1] = 1;
@@ -409,9 +441,30 @@ int main (void) {
     mat_rotation_view.mat[2][2] = -camera_g.vec[2];
     mat_rotation_view.mat[3][3] = float(1);
 
-    vertex_buffer = new Vec3[8];
+	Vec4 light_dir;
+	light_dir.vec[0] = -light_x;
+	light_dir.vec[1] = -light_y;
+	light_dir.vec[2] = -light_z;
 
-    ifstream vertices_file("./model/vertices.txt");
+	light_dir.normalize();
+
+	light_dir = mat_rotation_view.dot(Vec4(light_dir));
+
+	if (strcmp(argv[1], "cube") == 0) {
+		num_vertices = 8;
+		num_triangles = 12;
+	} else if (strcmp(argv[1], "sphere") == 0) {
+		num_vertices = 1984;
+		num_triangles = 960;	
+	}
+
+	printf("%d %d\n", num_triangles, num_vertices);
+
+    vertex_buffer = new Vec3[num_vertices];
+
+	string model_vertices_filename = "../model/" + string(argv[1]) + "/vertices.txt"; 
+
+    ifstream vertices_file(model_vertices_filename.c_str());
 
     int vertex_index = 0;
 
@@ -428,7 +481,7 @@ int main (void) {
     }
 
 
-    index_buffer = (int*) malloc(12 * 3 * sizeof(int)); 
+    index_buffer = (int*) malloc(num_triangles * 3 * sizeof(int)); 
 
     //132
     //031
@@ -442,7 +495,8 @@ int main (void) {
     //047
     //051
     //054
-    ifstream index_file("./model/index.txt");
+	string model_index_filename = "../model/" + string(argv[1]) + "/indices.txt";
+    ifstream index_file(model_index_filename.c_str());
 
     if (!index_file) {
         printf("Error: Unable to find model index file\n");
@@ -458,16 +512,18 @@ int main (void) {
     vertices_file.close();
     index_file.close();
 
-    vertex_vec4_buffer = new Vec4[8];
+    vertex_vec4_buffer = new Vec4[num_vertices];
 
-    vertex_world_buffer = new Vec3[8];
+    vertex_world_buffer = new Vec3[num_vertices];
 
     Mat4 mat_translation_world;
     mat_translation_world.mat[0][0] = float(1);
     mat_translation_world.mat[1][1] = float(1);
     mat_translation_world.mat[2][2] = float(1);
     mat_translation_world.mat[3][3] = float(1);
-    mat_translation_world.mat[2][3] = -10.0;
+    mat_translation_world.mat[0][3] = tran_x;
+    mat_translation_world.mat[1][3] = tran_y;
+    mat_translation_world.mat[2][3] = tran_z;
 
     Mat4 mat_viewpoint;
     mat_viewpoint.mat[0][0] = SCREEN_WIDTH / 2.0;
@@ -488,14 +544,14 @@ int main (void) {
     mat_view = mat_overall;
     mat_overall = mat_persp.dot(mat_overall);
 
-    result_vertex_buffer = new Vec2[8];
+    result_vertex_buffer = new Vec2[num_vertices];
 
     string temp;
 
     mat_overall.print("Overall");
     mat_view.print("View");
 
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < num_vertices; i++) {
         Vec3 vertex_vec3 = vertex_buffer[i];
 
         vertex_vec4_buffer[i] = mat_view.dot(Vec4(vertex_vec3));
@@ -516,42 +572,54 @@ int main (void) {
         result_vertex_buffer[i].round();
     }     
 
-    valid_buffer = (int*) malloc(12 * sizeof(int));
+    valid_buffer = (int*) malloc(num_triangles * sizeof(int));
+    intensity_buffer = (float*) malloc(num_triangles * sizeof(float));
 
-    for (int i = 0; i < 12; i++) {
+	int valid_cnt = 0;
+
+    for (int i = 0; i < num_triangles; i++) {
         Vec3 vec01 = vertex_world_buffer[index_buffer[3 * i + 1]] - vertex_world_buffer[index_buffer[3 * i]];
         Vec3 vec02 = vertex_world_buffer[index_buffer[3 * i + 2]] - vertex_world_buffer[index_buffer[3 * i]];
 
         Vec3 norm = vec01.cross(vec02);
         float camera_dir_dot_surface_norm = norm.dot(vertex_world_buffer[index_buffer[3 * i]]);
 
+		norm.normalize();
+		float light_intensity = norm.dot(light_dir);
+
+		intensity_buffer[i] = (light_intensity < 0) ? 0 : light_intensity;
+		printf("Light Intensity is %f\n", intensity_buffer[i]);
+
         valid_buffer[i] = (camera_dir_dot_surface_norm < 0.0);
+		if (valid_buffer[i]) valid_cnt++;
         printf("Debug: Tri %d is %d\n", i, valid_buffer[i]);
     }
+
+	printf("Valid triangles %d\n", valid_cnt);
 
     unsigned char frame_buffer[640*480][3];
 
     memset(frame_buffer, 0xFF, 640*480*3); 
 
-    int w0[12];
-    int w1[12];
-    int w2[12];
+    int w0[num_triangles];
+    int w1[num_triangles];
+    int w2[num_triangles];
 
-    int w0_row[12];
-    int w1_row[12];
-    int w2_row[12];
+    int w0_row[num_triangles];
+    int w1_row[num_triangles];
+    int w2_row[num_triangles];
 
-    int delta_w0_row[12];
-    int delta_w1_row[12];
-    int delta_w2_row[12];
+    int delta_w0_row[num_triangles];
+    int delta_w1_row[num_triangles];
+    int delta_w2_row[num_triangles];
 
-    int delta_w0_col[12];
-    int delta_w1_col[12];
-    int delta_w2_col[12];
+    int delta_w0_col[num_triangles];
+    int delta_w1_col[num_triangles];
+    int delta_w2_col[num_triangles];
 
     for (int row = 0; row < 480; row++) {
         for (int col = 0; col < 640; col++) {
-            for (int i = 0; i < 12; i++) {
+            for (int i = 0; i < num_triangles; i++) {
                 if (row == 0 && col == 0) {
                     Vec2 v0(result_vertex_buffer[index_buffer[3 * i]]);
                     Vec2 v1(result_vertex_buffer[index_buffer[3 * i + 1]]);
@@ -605,13 +673,20 @@ int main (void) {
                 bool is_inside = (w0[i] < 0 && w1[i] < 0 && w2[i] < 0);
 
                 if (is_inside && valid_buffer[i]) {
-                    frame_buffer[col + row * 640][0] = color_r[i];
-                    frame_buffer[col + row * 640][1] = color_g[i];
-                    frame_buffer[col + row * 640][2] = color_b[i];
+                    frame_buffer[col + row * 640][0] = (float) color_r[i%8] * intensity_buffer[i];
+                    frame_buffer[col + row * 640][1] = (float) color_g[i%8] * intensity_buffer[i];
+                    frame_buffer[col + row * 640][2] = (float) color_b[i%8] * intensity_buffer[i];
                 }
             }
         }
     }
+    
+	ofstream image_file("output_img.txt");
+
+	for (int i = 0; i < 640 * 480; i++) {
+		image_file << (int)frame_buffer[i][0] << " " << (int)frame_buffer[i][1] << " " << (int)frame_buffer[i][2] << endl;
+	}	
+
 
 #ifdef SDL
     initialize_sdl();
@@ -644,10 +719,10 @@ int main (void) {
         }
 
 
-        for (int i = 0; i < 8; i++) {
-            SDL_SetRenderDrawColor(gRenderer, color_r[i], color_g[i], color_b[i], 0xFF);
-            result_vertex_buffer[i].render();
-        }
+        //for (int i = 0; i < num_vertices; i++) {
+        //    SDL_SetRenderDrawColor(gRenderer, color_r[i], color_g[i], color_b[i], 0xFF);
+        //    result_vertex_buffer[i].render();
+        //}
 
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 
