@@ -128,7 +128,7 @@ class Vec2 : public Vec {
             return ret;
         }
 
-        Vec2(Vec4 ref) : Vec2() {
+        Vec2(Vec3 ref) : Vec2() {
             vec[0] = ref.vec[0];
             vec[1] = ref.vec[1];
         }
@@ -249,7 +249,7 @@ class Mat3 {
 Vec3* vertex_buffer;
 Vec4* vertex_vec4_buffer;
 Vec3* vertex_world_buffer;
-Vec2* result_vertex_buffer;
+Vec3* result_vertex_buffer;
 
 int* index_buffer;
 int* valid_buffer;
@@ -278,7 +278,7 @@ int initialize_sdl() {
         return -1;
     }
 
-    gWindow = SDL_CreateWindow("3D Graphics", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    gWindow = SDL_CreateWindow("3D Graphics", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 
     if (gWindow == NULL) {
         SDL_ERROR_MSG("SDL: Failed to create window");
@@ -298,7 +298,8 @@ int initialize_sdl() {
         return -1;
     }
 
-    SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0x00);
+    SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
+    //SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0x00);
 
     return 0;
 }
@@ -315,9 +316,9 @@ int main (int argc, char** argv) {
     //unsigned char color_r[8] = {0xF0, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00};
     //unsigned char color_g[8] = {0xF0, 0xFF, 0x00, 0x00, 0xFF, 0xFF, 0x00, 0x00};
     //unsigned char color_b[8] = {0xF0, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};
-    unsigned char color_r[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-    unsigned char color_g[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-    unsigned char color_b[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    //unsigned char color_r[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    //unsigned char color_g[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    //unsigned char color_b[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
     const float fovy = 45.0;
     const float n = 1.0;
@@ -328,15 +329,15 @@ int main (int argc, char** argv) {
 
     float rot_x, rot_y, rot_z;
 
-	rot_x = 20;
+	rot_x = 300;
     rot_y = 0;
-    rot_z = 0;
+    rot_z = 20;
 
 	float tran_x, tran_y, tran_z;
 
 	tran_x = 0;
 	tran_y = 0;
-	tran_z = -3;
+	tran_z = -10;
 
 	float light_x, light_y, light_z;
 
@@ -456,6 +457,12 @@ int main (int argc, char** argv) {
 	} else if (strcmp(argv[1], "sphere") == 0) {
 		num_vertices = 1984;
 		num_triangles = 960;	
+	} else if (strcmp(argv[1], "apple_logo_1") == 0) {
+		num_vertices = 1172;
+		num_triangles = 2336;
+	} else if (strcmp(argv[1], "apple_logo") == 0) {
+		num_vertices = 528;
+		num_triangles = 1048;
 	}
 
 	printf("%d %d\n", num_triangles, num_vertices);
@@ -531,6 +538,7 @@ int main (int argc, char** argv) {
     //This is inverted as SDL coordinate system has Y-Axis points downward
     mat_viewpoint.mat[1][1] = -SCREEN_HEIGHT / 2.0;
     mat_viewpoint.mat[1][3] = (SCREEN_HEIGHT - 1.0) / 2.0;
+    mat_viewpoint.mat[2][2] = 1.0;
 
     Mat4 mat_view;
     Mat4 mat_overall;
@@ -544,7 +552,7 @@ int main (int argc, char** argv) {
     mat_view = mat_overall;
     mat_overall = mat_persp.dot(mat_overall);
 
-    result_vertex_buffer = new Vec2[num_vertices];
+    result_vertex_buffer = new Vec3[num_vertices];
 
     string temp;
 
@@ -553,6 +561,11 @@ int main (int argc, char** argv) {
 
     for (int i = 0; i < num_vertices; i++) {
         Vec3 vertex_vec3 = vertex_buffer[i];
+		if (strcmp(argv[1], "apple_logo_1") == 0) {
+			vertex_vec3.vec[0] /= 100.0;
+			vertex_vec3.vec[1] /= 100.0;
+			vertex_vec3.vec[2] /= 100.0;
+		}
 
         vertex_vec4_buffer[i] = mat_view.dot(Vec4(vertex_vec3));
 
@@ -566,10 +579,12 @@ int main (int argc, char** argv) {
 
         vertex_vec4_buffer[i] = mat_viewpoint.dot(vertex_vec4_buffer[i]);
 
-        Vec2 result(vertex_vec4_buffer[i]);
+        Vec3 result;
+		result.vec[0] = (int)vertex_vec4_buffer[i].vec[0];
+		result.vec[1] = (int)vertex_vec4_buffer[i].vec[1];
+		result.vec[2] = vertex_vec4_buffer[i].vec[2];
 
         result_vertex_buffer[i] = result;
-        result_vertex_buffer[i].round();
     }     
 
     valid_buffer = (int*) malloc(num_triangles * sizeof(int));
@@ -598,8 +613,10 @@ int main (int argc, char** argv) {
 	printf("Valid triangles %d\n", valid_cnt);
 
     unsigned char frame_buffer[640*480][3];
+	float depth_buffer[640*480];
 
-    memset(frame_buffer, 0xFF, 640*480*3); 
+    memset(frame_buffer, 0x00, 640 * 480 * 3); 
+	memset(depth_buffer, 0, 640 * 480 * sizeof(float)); 
 
     int w0[num_triangles];
     int w1[num_triangles];
@@ -617,9 +634,18 @@ int main (int argc, char** argv) {
     int delta_w1_col[num_triangles];
     int delta_w2_col[num_triangles];
 
-    for (int row = 0; row < 480; row++) {
-        for (int col = 0; col < 640; col++) {
-            for (int i = 0; i < num_triangles; i++) {
+    for (int i = 0; i < num_triangles; i++) {
+		unsigned char color_r = 255;
+		unsigned char color_g = 0;
+		unsigned char color_b = 0;
+		//unsigned char color_r = rand() % 255;
+		//unsigned char color_g = rand() % 255;
+		//unsigned char color_b = rand() % 255;
+		float depth = result_vertex_buffer[index_buffer[3 * i]].vec[2] + 
+					  result_vertex_buffer[index_buffer[3 * i + 1]].vec[2] +  
+					  result_vertex_buffer[index_buffer[3 * i + 2]].vec[2]; 
+		for (int row = 0; row < 480; row++) {
+			for (int col = 0; col < 640; col++) {
                 if (row == 0 && col == 0) {
                     Vec2 v0(result_vertex_buffer[index_buffer[3 * i]]);
                     Vec2 v1(result_vertex_buffer[index_buffer[3 * i + 1]]);
@@ -673,9 +699,18 @@ int main (int argc, char** argv) {
                 bool is_inside = (w0[i] < 0 && w1[i] < 0 && w2[i] < 0);
 
                 if (is_inside && valid_buffer[i]) {
-                    frame_buffer[col + row * 640][0] = (float) color_r[i%8] * intensity_buffer[i];
-                    frame_buffer[col + row * 640][1] = (float) color_g[i%8] * intensity_buffer[i];
-                    frame_buffer[col + row * 640][2] = (float) color_b[i%8] * intensity_buffer[i];
+					if (depth_buffer[col + row * 640] != 0 && depth_buffer[col + row * 640] < depth)
+						continue;
+
+
+					depth_buffer[col + row * 640] = depth;
+                    frame_buffer[col + row * 640][0] = (float) color_r * intensity_buffer[i];
+                    frame_buffer[col + row * 640][1] = (float) color_g * intensity_buffer[i];
+                    frame_buffer[col + row * 640][2] = (float) color_b * intensity_buffer[i];
+						
+                    //frame_buffer[col + row * 640][0] = (float) color_r[i%8] * intensity_buffer[i];
+                    //frame_buffer[col + row * 640][1] = (float) color_g[i%8] * intensity_buffer[i];
+                    //frame_buffer[col + row * 640][2] = (float) color_b[i%8] * intensity_buffer[i];
                 }
             }
         }
@@ -724,7 +759,8 @@ int main (int argc, char** argv) {
         //    result_vertex_buffer[i].render();
         //}
 
-        SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+        SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0x00);
+        //SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 
         SDL_RenderPresent(gRenderer);
     }
