@@ -2,11 +2,14 @@ import numpy as np
 from PIL import Image
 import glob
 import re
+import imageio
 
 rgb = np.zeros((480, 640, 3), dtype=np.uint8)
 
 raw_file_list = sorted(glob.glob('pixel_file*.txt'))
 print(raw_file_list)
+
+images = []
 
 for raw_file_name in raw_file_list:
 
@@ -61,3 +64,9 @@ for raw_file_name in raw_file_list:
     img = Image.fromarray(rgb)
     #img.show()
     img.save(img_file_name)
+
+#for i in range(len(raw_file_list)):
+#    file_name = "frame_" + str(i) + ".bmp"
+#    images.append(imageio.imread(file_name))
+#
+#imageio.mimsave('./movie.gif', images)
